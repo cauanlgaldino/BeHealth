@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		36DEDD6E2C7CA50E0031A978 /* criar_usuario_view.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36DEDD6D2C7CA50E0031A978 /* criar_usuario_view.swift */; };
 		E77824D42C78D6BC00B55618 /* BeHealthApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E77824D32C78D6BC00B55618 /* BeHealthApp.swift */; };
 		E77824D62C78D6BC00B55618 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E77824D52C78D6BC00B55618 /* ContentView.swift */; };
 		E77824D82C78D6BE00B55618 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E77824D72C78D6BE00B55618 /* Assets.xcassets */; };
@@ -34,6 +35,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		36DEDD6D2C7CA50E0031A978 /* criar_usuario_view.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = criar_usuario_view.swift; sourceTree = "<group>"; };
 		E77824D02C78D6BC00B55618 /* BeHealth.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BeHealth.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E77824D32C78D6BC00B55618 /* BeHealthApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeHealthApp.swift; sourceTree = "<group>"; };
 		E77824D52C78D6BC00B55618 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -95,6 +97,7 @@
 			isa = PBXGroup;
 			children = (
 				E77824D32C78D6BC00B55618 /* BeHealthApp.swift */,
+				36DEDD6D2C7CA50E0031A978 /* criar_usuario_view.swift */,
 				E77824D52C78D6BC00B55618 /* ContentView.swift */,
 				E77824D72C78D6BE00B55618 /* Assets.xcassets */,
 				E77824D92C78D6BE00B55618 /* Preview Content */,
@@ -258,6 +261,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E77824D62C78D6BC00B55618 /* ContentView.swift in Sources */,
+				36DEDD6E2C7CA50E0031A978 /* criar_usuario_view.swift in Sources */,
 				E77824D42C78D6BC00B55618 /* BeHealthApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
