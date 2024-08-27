@@ -6,53 +6,87 @@
 //
 
 import SwiftUI
-
+ 
 struct ContentView: View {
+    struct Usuario {
+        var nome : String = ""
+        var senha : String = ""
+    }
+    @State private var usuario : Usuario = .init()
+    @FocusState private var imputFocused: Bool
     var body: some View {
-        VStack {
-            Spacer()
-            Text("BeHealth")
+        
+        VStack{
+            Text("Login")
                 .font(.system(size: 32))
                 .fontDesign(.rounded)
-                .fontWeight(.semibold)
                 .foregroundStyle(.iconcolor)
-            List{
-                Section{
-                    NavigationLink(destination: Login()){
-                        VStack{
-                            Text("Criar Usuario").bold()
-                                .font(.system(size: 16))
-                                .foregroundColor(.iconcolor)
-                                .multilineTextAlignment(/*@START_MENU_TOKEN@*/.leading/*@END_MENU_TOKEN@*/)
-                        }
-                    }
-                    NavigationLink(destination: Login()){
-                        VStack{
-                            Text("Login").bold()
-                                .font(.system(size: 16))
-                                .foregroundColor(.iconcolor)
-                                .multilineTextAlignment(/*@START_MENU_TOKEN@*/.leading/*@END_MENU_TOKEN@*/)
-                        }
-                    }
-                    
-                } .listRowSeparator(.hidden)
-                    .padding()
-                    .listRowBackground(
-                        RoundedRectangle(cornerRadius: 11)
-                            .fill(.tabcolor)
-                            .padding()
-                    )
-            }.listStyle(.plain)
-                .background {
-                    Color(.backgroundcolor).ignoresSafeArea()
-                }
-        
+                .fontWeight(.semibold)
+            usernameTxtVw
+            passwordTxtVw
+            submitBtn
         }
-        .padding()
         .background(.backgroundcolor)
+        .ignoresSafeArea()
+        .padding()
+        .textFieldStyle(.roundedBorder)
+        .disableAutocorrection(true)
+        .textInputAutocapitalization(.never)
+        .toolbar {
+            ToolbarItemGroup(placement: .keyboard){
+                Spacer()
+                Button(action: resignKeyboard){
+                    Text("OK")
+                }
+                .buttonStyle(.borderless)
+                .border(.secondary)
+                
+            }
+        }
+        .onSubmit(of: .text,submit)
     }
 }
 
 #Preview {
     ContentView()
+}
+
+private extension ContentView{
+    var usernameTxtVw : some View {
+        TextField("Usuario", text: $usuario.nome, prompt: Text("Insira seu username"))
+            .textContentType(.username)
+            .focused($imputFocused)
+    }
+    var passwordTxtVw : some View {
+        SecureField("Usuario", text: $usuario.senha, prompt: Text("Insira seu username"))
+            .textContentType(.password)
+            .focused($imputFocused)
+            .submitLabel(.done)
+    }
+    var submitBtn : some View {
+        Button(action: submit)   {
+            Text("Submit")
+                .padding(EdgeInsets())
+                .background(.tabcolor)
+            
+        }
+        
+    }
+}
+private extension ContentView{
+    func submit(){
+        print ("The user imputted: \(usuario)")
+        resignKeyboard()
+    }
+    func resignKeyboard() { if #available(iOS 15, *){
+            imputFocused = false
+        } else {
+            dismissKeyboard()
+        }
+    }
+}
+extension View{
+    func dismissKeyboard() {
+        UIApplication.shared.sendAction(#selector(UIResponder.resignFirstResponder),to: nil, from: nil, for: nil)
+    }
 }
