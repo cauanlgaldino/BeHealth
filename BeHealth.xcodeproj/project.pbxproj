@@ -16,6 +16,7 @@
 		E77824F12C78D6BE00B55618 /* BeHealthUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E77824F02C78D6BE00B55618 /* BeHealthUITestsLaunchTests.swift */; };
 		E90E5EBE2C7CAAF700E27B41 /* Login.swift in Sources */ = {isa = PBXBuildFile; fileRef = E90E5EBD2C7CAAF700E27B41 /* Login.swift */; };
 		E9EB9F562C7CE87900D57A65 /* inicio.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9EB9F552C7CE87900D57A65 /* inicio.swift */; };
+		E9EB9F5A2C7DF01100D57A65 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9EB9F592C7DF01100D57A65 /* LoginView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +49,7 @@
 		E77824F02C78D6BE00B55618 /* BeHealthUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeHealthUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		E90E5EBD2C7CAAF700E27B41 /* Login.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Login.swift; sourceTree = "<group>"; };
 		E9EB9F552C7CE87900D57A65 /* inicio.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = inicio.swift; sourceTree = "<group>"; };
+		E9EB9F592C7DF01100D57A65 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +106,7 @@
 				E77824D92C78D6BE00B55618 /* Preview Content */,
 				E90E5EBD2C7CAAF700E27B41 /* Login.swift */,
 				E9EB9F552C7CE87900D57A65 /* inicio.swift */,
+				E9EB9F592C7DF01100D57A65 /* LoginView.swift */,
 			);
 			path = BeHealth;
 			sourceTree = "<group>";
@@ -266,6 +269,7 @@
 				E90E5EBE2C7CAAF700E27B41 /* Login.swift in Sources */,
 				E77824D62C78D6BC00B55618 /* ContentView.swift in Sources */,
 				E9EB9F562C7CE87900D57A65 /* inicio.swift in Sources */,
+				E9EB9F5A2C7DF01100D57A65 /* LoginView.swift in Sources */,
 				E77824D42C78D6BC00B55618 /* BeHealthApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
