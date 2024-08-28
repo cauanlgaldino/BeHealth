@@ -14,6 +14,8 @@
 		E77824E52C78D6BE00B55618 /* BeHealthTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E77824E42C78D6BE00B55618 /* BeHealthTests.swift */; };
 		E77824EF2C78D6BE00B55618 /* BeHealthUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E77824EE2C78D6BE00B55618 /* BeHealthUITests.swift */; };
 		E77824F12C78D6BE00B55618 /* BeHealthUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E77824F02C78D6BE00B55618 /* BeHealthUITestsLaunchTests.swift */; };
+		E9EB9F632C7F43CB00D57A65 /* perfilView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9EB9F622C7F43CB00D57A65 /* perfilView.swift */; };
+		E9EB9F652C7F442900D57A65 /* postMV.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9EB9F642C7F442900D57A65 /* postMV.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +46,8 @@
 		E77824EA2C78D6BE00B55618 /* BeHealthUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BeHealthUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E77824EE2C78D6BE00B55618 /* BeHealthUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeHealthUITests.swift; sourceTree = "<group>"; };
 		E77824F02C78D6BE00B55618 /* BeHealthUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeHealthUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		E9EB9F622C7F43CB00D57A65 /* perfilView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = perfilView.swift; sourceTree = "<group>"; };
+		E9EB9F642C7F442900D57A65 /* postMV.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = postMV.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +102,8 @@
 				E77824D52C78D6BC00B55618 /* ContentView.swift */,
 				E77824D72C78D6BE00B55618 /* Assets.xcassets */,
 				E77824D92C78D6BE00B55618 /* Preview Content */,
+				E9EB9F622C7F43CB00D57A65 /* perfilView.swift */,
+				E9EB9F642C7F442900D57A65 /* postMV.swift */,
 			);
 			path = BeHealth;
 			sourceTree = "<group>";
@@ -257,8 +263,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E9EB9F652C7F442900D57A65 /* postMV.swift in Sources */,
 				E77824D62C78D6BC00B55618 /* ContentView.swift in Sources */,
 				E77824D42C78D6BC00B55618 /* BeHealthApp.swift in Sources */,
+				E9EB9F632C7F43CB00D57A65 /* perfilView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
