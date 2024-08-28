@@ -12,13 +12,11 @@ struct Start: View {
         NavigationStack {
             ZStack {
                 Color.backgroundcolor
-                    .ignoresSafeArea()
+                   .ignoresSafeArea()
+                Image("initialscreen")
+                    .resizable()
+                    .scaledToFill()
                 VStack {
-                    Text("BeHealth")
-                        .font(.system(size: 32))
-                        .fontDesign(.rounded)
-                        .bold()
-                        .foregroundStyle(.iconcolor)
                     NavigationLink(destination: LoginView()) {
                         VStack(alignment: .leading) {
                             Text("Criar Usuario").bold()

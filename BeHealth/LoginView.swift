@@ -16,20 +16,25 @@ struct LoginView: View {
     @FocusState private var imputFocused: Bool
     var body: some View {
     ZStack {
-            Color.backgroundcolor
-                .ignoresSafeArea()
-            VStack {
+        Color.backgroundcolor
+           .ignoresSafeArea()
+            Image("loginscreen")
+             .resizable()
+             .scaledToFill()
+             .frame(width: 480, height: 500)
+            .ignoresSafeArea()
+        VStack {
                 Text("Login")
                     .font(.system(size: 32))
                     .fontDesign(.rounded)
-                    .foregroundStyle(.iconcolor)
+                   .foregroundStyle(.iconcolor)
                     .fontWeight(.semibold)
                 usernameTxtVw
                 passwordTxtVw
                 submitBtn
             }
             .ignoresSafeArea()
-            .padding()
+            .padding(20)
             .textFieldStyle(.roundedBorder)
             .disableAutocorrection(true)
             .textInputAutocapitalization(.never)
@@ -64,7 +69,6 @@ private extension LoginView {
                 RoundedRectangle(cornerRadius: 10)
                     .stroke(Color.iconcolor, lineWidth: 2)
                     .frame(width: 300, height: 40)
-                
             )
     }
     var passwordTxtVw: some View {
@@ -79,7 +83,6 @@ private extension LoginView {
                 RoundedRectangle(cornerRadius: 10)
                     .stroke(Color.iconcolor, lineWidth: 2)
                     .frame(width: 300, height: 40)
-                
             )
     }
     var submitBtn: some View {
