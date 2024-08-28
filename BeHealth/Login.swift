@@ -9,12 +9,12 @@ import SwiftUI
 
 struct Login: View {
     var body: some View {
-        NavigationStack{
-            VStack{
+        NavigationStack {
+            VStack {
                 TextField("Usuario", text: .constant(""), prompt: Text("Insira seu username"))
                 TextField("Senha", text: .constant(""), prompt: Text("Insira seu username"))
             }
-            SecureField("Senha", text: . constant(""),prompt: Text("Insira sua senha") )
+            SecureField("Senha", text: . constant(""), prompt: Text("Insira sua senha") )
         }
     }
 }

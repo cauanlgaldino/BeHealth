@@ -9,40 +9,42 @@ import SwiftUI
 
 struct LoginView: View {
     struct Usuario {
-        var nome : String = ""
-        var senha : String = ""
+        var nome: String = ""
+        var senha: String = ""
     }
-    @State private var usuario : Usuario = .init()
+    @State private var usuario: Usuario = .init()
     @FocusState private var imputFocused: Bool
     var body: some View {
-        
-        VStack{
-            Text("Login")
-                .font(.system(size: 32))
-                .fontDesign(.rounded)
-                .foregroundStyle(.iconcolor)
-                .fontWeight(.semibold)
-            usernameTxtVw
-            passwordTxtVw
-            submitBtn
-        }
-        .ignoresSafeArea()
-        .padding()
-        .textFieldStyle(.roundedBorder)
-        .disableAutocorrection(true)
-        .textInputAutocapitalization(.never)
-        .toolbar {
-            ToolbarItemGroup(placement: .keyboard){
-                Spacer()
-                Button(action: resignKeyboard){
-                    Text("OK")
-                }
-                .buttonStyle(.borderless)
-                .border(.secondary)
-                
+    ZStack {
+            Color.backgroundcolor
+                .ignoresSafeArea()
+            VStack {
+                Text("Login")
+                    .font(.system(size: 32))
+                    .fontDesign(.rounded)
+                    .foregroundStyle(.iconcolor)
+                    .fontWeight(.semibold)
+                usernameTxtVw
+                passwordTxtVw
+                submitBtn
             }
+            .ignoresSafeArea()
+            .padding()
+            .textFieldStyle(.roundedBorder)
+            .disableAutocorrection(true)
+            .textInputAutocapitalization(.never)
+            .toolbar {
+                ToolbarItemGroup(placement: .keyboard) {
+                    Spacer()
+                    Button(action: resignKeyboard) {
+                        Text("OK")
+                    }
+                    .buttonStyle(.borderless)
+                    .border(.secondary)
+                }
+            }
+            .onSubmit(of: .text, submit)
         }
-        .onSubmit(of: .text,submit)
     }
 }
 
@@ -50,47 +52,64 @@ struct LoginView: View {
     ContentView()
 }
 
-private extension LoginView{
-    var usernameTxtVw : some View {
-        TextField("Usuario", text: $usuario.nome, prompt: Text("Insira seu username"))
+private extension LoginView {
+    var usernameTxtVw: some View {
+        TextField("Usuario", text: $usuario.nome, prompt: Text("Insira seu username").foregroundColor(.iconcolor))
             .textContentType(.username)
             .focused($imputFocused)
+            .frame(width: 300, height: 50)
+            .background(Color.backgroundcolor)
+            .cornerRadius(8)
+            .overlay(
+                RoundedRectangle(cornerRadius: 10)
+                    .stroke(Color.iconcolor, lineWidth: 2)
+                    .frame(width: 300, height: 40)
+                
+            )
     }
-    var passwordTxtVw : some View {
-        SecureField("Usuario", text: $usuario.senha, prompt: Text("Insira seu username"))
+    var passwordTxtVw: some View {
+        SecureField("Usuario", text: $usuario.senha, prompt: Text("Insira sua senha").foregroundColor(.iconcolor))
             .textContentType(.password)
             .focused($imputFocused)
             .submitLabel(.done)
+            .frame(width: 300, height: 50, alignment: .center)
+            .background(Color.backgroundcolor)
+            .cornerRadius(8)
+            .overlay(
+                RoundedRectangle(cornerRadius: 10)
+                    .stroke(Color.iconcolor, lineWidth: 2)
+                    .frame(width: 300, height: 40)
+                
+            )
     }
-    var submitBtn : some View {
-        Button(action: submit)   {
-            Text("Submit")
-                .padding(EdgeInsets())
-                .background(.tabcolor)
-            
+    var submitBtn: some View {
+        Button(action: submit) {
+            Text("Entrar")
+                .bold()
+                .frame(width: 200, height: 50, alignment: .center)
+                .background(Color.tabcolor)
+                .foregroundColor(.iconcolor)
+                .cornerRadius(8)
         }
-        
     }
 }
-private extension LoginView{
-    func submit(){
-        print ("The user imputted: \(usuario)")
+private extension LoginView {
+    func submit() {
+        print("The user imputted: \(usuario)")
         resignKeyboard()
     }
-    func resignKeyboard() { if #available(iOS 15, *){
-            imputFocused = false
-        } else {
-            dismissKeyboard()
-        }
+    func resignKeyboard() { if #available(iOS 15, *) {
+        imputFocused = false
+    } else {
+        dismissKeyboard()
+    }
     }
 }
-extension View{
+extension View {
     func dismissKeyboard() {
-        UIApplication.shared.sendAction(#selector(UIResponder.resignFirstResponder),to: nil, from: nil, for: nil)
+        UIApplication.shared.sendAction(#selector(UIResponder.resignFirstResponder), to: nil, from: nil, for: nil)
     }
 }
-
-
 #Preview {
     LoginView()
 }
