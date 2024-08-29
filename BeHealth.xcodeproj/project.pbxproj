@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		36DEDD6E2C7CA50E0031A978 /* criar_usuario_view.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36DEDD6D2C7CA50E0031A978 /* criar_usuario_view.swift */; };
+		368F86B72C7E008F00BDFF0B /* CriarUsuarioView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 368F86B62C7E008F00BDFF0B /* CriarUsuarioView.swift */; };
 		E77824D42C78D6BC00B55618 /* BeHealthApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E77824D32C78D6BC00B55618 /* BeHealthApp.swift */; };
 		E77824D62C78D6BC00B55618 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E77824D52C78D6BC00B55618 /* ContentView.swift */; };
 		E77824D82C78D6BE00B55618 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E77824D72C78D6BE00B55618 /* Assets.xcassets */; };
@@ -35,7 +35,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		36DEDD6D2C7CA50E0031A978 /* criar_usuario_view.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = criar_usuario_view.swift; sourceTree = "<group>"; };
+		368F86B62C7E008F00BDFF0B /* CriarUsuarioView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CriarUsuarioView.swift; sourceTree = "<group>"; };
 		E77824D02C78D6BC00B55618 /* BeHealth.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BeHealth.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E77824D32C78D6BC00B55618 /* BeHealthApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeHealthApp.swift; sourceTree = "<group>"; };
 		E77824D52C78D6BC00B55618 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -97,7 +97,7 @@
 			isa = PBXGroup;
 			children = (
 				E77824D32C78D6BC00B55618 /* BeHealthApp.swift */,
-				36DEDD6D2C7CA50E0031A978 /* criar_usuario_view.swift */,
+				368F86B62C7E008F00BDFF0B /* CriarUsuarioView.swift */,
 				E77824D52C78D6BC00B55618 /* ContentView.swift */,
 				E77824D72C78D6BE00B55618 /* Assets.xcassets */,
 				E77824D92C78D6BE00B55618 /* Preview Content */,
@@ -144,6 +144,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				3672398B2C7DF83C00785F48 /* PBXTargetDependency */,
 			);
 			name = BeHealth;
 			productName = BeHealth;
@@ -218,6 +219,9 @@
 				Base,
 			);
 			mainGroup = E77824C72C78D6BC00B55618;
+			packageReferences = (
+				367239892C7DF81600785F48 /* XCRemoteSwiftPackageReference "SwiftLint" */,
+			);
 			productRefGroup = E77824D12C78D6BC00B55618 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -261,7 +265,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E77824D62C78D6BC00B55618 /* ContentView.swift in Sources */,
-				36DEDD6E2C7CA50E0031A978 /* criar_usuario_view.swift in Sources */,
+				368F86B72C7E008F00BDFF0B /* CriarUsuarioView.swift in Sources */,
 				E77824D42C78D6BC00B55618 /* BeHealthApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -286,6 +290,10 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		3672398B2C7DF83C00785F48 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			productRef = 3672398A2C7DF83C00785F48 /* SwiftLintBuildToolPlugin */;
+		};
 		E77824E22C78D6BE00B55618 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = E77824CF2C78D6BC00B55618 /* BeHealth */;
@@ -586,6 +594,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		367239892C7DF81600785F48 /* XCRemoteSwiftPackageReference "SwiftLint" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/realm/SwiftLint#xcode-projects";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.56.2;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		3672398A2C7DF83C00785F48 /* SwiftLintBuildToolPlugin */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 367239892C7DF81600785F48 /* XCRemoteSwiftPackageReference "SwiftLint" */;
+			productName = "plugin:SwiftLintBuildToolPlugin";
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = E77824C82C78D6BC00B55618 /* Project object */;
 }
