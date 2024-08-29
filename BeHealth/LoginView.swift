@@ -16,7 +16,7 @@ struct LoginView: View {
     @FocusState private var imputFocused: Bool
     var body: some View {
     ZStack {
-        Color.backgroundcolor
+        Color.white
            .ignoresSafeArea()
             Image("loginscreen")
              .resizable()
@@ -30,7 +30,9 @@ struct LoginView: View {
                    .foregroundStyle(.iconcolor)
                     .fontWeight(.semibold)
                 usernameTxtVw
+                .padding()
                 passwordTxtVw
+                .padding(/*@START_MENU_TOKEN@*/EdgeInsets()/*@END_MENU_TOKEN@*/)
                 submitBtn
             }
             .ignoresSafeArea()
@@ -59,12 +61,12 @@ private extension LoginView {
             .textContentType(.username)
             .focused($imputFocused)
             .frame(width: 300, height: 50)
-            .background(Color.backgroundcolor)
+            .background(Color.white)
             .cornerRadius(8)
             .overlay(
                 RoundedRectangle(cornerRadius: 10)
                     .stroke(Color.iconcolor, lineWidth: 2)
-                    .frame(width: 300, height: 40)
+                    .frame(width: 300, height: 35)
             )
     }
     var passwordTxtVw: some View {
@@ -73,12 +75,12 @@ private extension LoginView {
             .focused($imputFocused)
             .submitLabel(.done)
             .frame(width: 300, height: 50, alignment: .center)
-            .background(Color.backgroundcolor)
+            .background(Color.white)
             .cornerRadius(8)
             .overlay(
                 RoundedRectangle(cornerRadius: 10)
                     .stroke(Color.iconcolor, lineWidth: 2)
-                    .frame(width: 300, height: 40)
+                    .frame(width: 300, height: 35)
             )
     }
     var submitBtn: some View {

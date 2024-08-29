@@ -11,7 +11,7 @@ struct Start: View {
     var body: some View {
         NavigationStack {
             ZStack {
-                Color.backgroundcolor
+                Color.white
                    .ignoresSafeArea()
                 Image("initialscreen")
                     .resizable()
