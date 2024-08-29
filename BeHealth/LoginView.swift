@@ -53,10 +53,6 @@ struct LoginView: View {
     }
 }
 
-#Preview {
-    ContentView()
-}
-
 private extension LoginView {
     var usernameTxtVw: some View {
         TextField("Usuario", text: $usuario.nome, prompt: Text("Insira seu username").foregroundColor(.iconcolor))
