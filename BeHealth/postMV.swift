@@ -15,20 +15,22 @@ struct postMV: View {
             VStack(alignment: .leading, spacing: 10) {
                 Text(postTitle)
                     .font(.headline)
-                    .foregroundColor(.blue)
+                    .foregroundColor(.iconcolor)
                 Text(postContent)
                     .font(.body)
                     .foregroundColor(.black)
                     .lineLimit(2)
-                Divider()
+              Divider()
             }
             .padding()
-            .background(Color(UIColor.systemGray6))
+            .background(Color(.tabcolor))
             .cornerRadius(8)
             .shadow(radius: 3)
         }
     }
 
 #Preview {
-    postMV(postTitle: "Título do Post", postContent: "Este é o conteúdo do post. Ele será exibido com uma linha de limite de texto para evitar sobreposição.")
+    postMV(
+    postTitle: "Título do Post", postContent:
+        "Este é o conteúdo do post. Ele será exibido com uma linha de limite de texto para evitar sobreposição.")
 }

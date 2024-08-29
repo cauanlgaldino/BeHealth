@@ -14,8 +14,9 @@
 		E77824E52C78D6BE00B55618 /* BeHealthTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E77824E42C78D6BE00B55618 /* BeHealthTests.swift */; };
 		E77824EF2C78D6BE00B55618 /* BeHealthUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E77824EE2C78D6BE00B55618 /* BeHealthUITests.swift */; };
 		E77824F12C78D6BE00B55618 /* BeHealthUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E77824F02C78D6BE00B55618 /* BeHealthUITestsLaunchTests.swift */; };
-		E9EB9F632C7F43CB00D57A65 /* perfilView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9EB9F622C7F43CB00D57A65 /* perfilView.swift */; };
-		E9EB9F652C7F442900D57A65 /* postMV.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9EB9F642C7F442900D57A65 /* postMV.swift */; };
+		E9EB9F6E2C7F4F1F00D57A65 /* PerfilPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9EB9F6D2C7F4F1F00D57A65 /* PerfilPage.swift */; };
+		E9EB9F702C7F4FC900D57A65 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9EB9F6F2C7F4FC900D57A65 /* Post.swift */; };
+		E9EB9F722C7FD64700D57A65 /* ConfigPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9EB9F712C7FD64700D57A65 /* ConfigPage.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,8 +47,9 @@
 		E77824EA2C78D6BE00B55618 /* BeHealthUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BeHealthUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E77824EE2C78D6BE00B55618 /* BeHealthUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeHealthUITests.swift; sourceTree = "<group>"; };
 		E77824F02C78D6BE00B55618 /* BeHealthUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeHealthUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		E9EB9F622C7F43CB00D57A65 /* perfilView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = perfilView.swift; sourceTree = "<group>"; };
-		E9EB9F642C7F442900D57A65 /* postMV.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = postMV.swift; sourceTree = "<group>"; };
+		E9EB9F6D2C7F4F1F00D57A65 /* PerfilPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PerfilPage.swift; sourceTree = "<group>"; };
+		E9EB9F6F2C7F4FC900D57A65 /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
+		E9EB9F712C7FD64700D57A65 /* ConfigPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigPage.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,8 +104,9 @@
 				E77824D52C78D6BC00B55618 /* ContentView.swift */,
 				E77824D72C78D6BE00B55618 /* Assets.xcassets */,
 				E77824D92C78D6BE00B55618 /* Preview Content */,
-				E9EB9F622C7F43CB00D57A65 /* perfilView.swift */,
-				E9EB9F642C7F442900D57A65 /* postMV.swift */,
+				E9EB9F6D2C7F4F1F00D57A65 /* PerfilPage.swift */,
+				E9EB9F6F2C7F4FC900D57A65 /* Post.swift */,
+				E9EB9F712C7FD64700D57A65 /* ConfigPage.swift */,
 			);
 			path = BeHealth;
 			sourceTree = "<group>";
@@ -147,6 +150,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				E9EB9F682C7F4D5500D57A65 /* PBXTargetDependency */,
 			);
 			name = BeHealth;
 			productName = BeHealth;
@@ -221,6 +225,9 @@
 				Base,
 			);
 			mainGroup = E77824C72C78D6BC00B55618;
+			packageReferences = (
+				E9EB9F662C7F4D3100D57A65 /* XCRemoteSwiftPackageReference "SwiftLint" */,
+			);
 			productRefGroup = E77824D12C78D6BC00B55618 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -263,10 +270,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E9EB9F652C7F442900D57A65 /* postMV.swift in Sources */,
+				E9EB9F6E2C7F4F1F00D57A65 /* PerfilPage.swift in Sources */,
+				E9EB9F722C7FD64700D57A65 /* ConfigPage.swift in Sources */,
 				E77824D62C78D6BC00B55618 /* ContentView.swift in Sources */,
+				E9EB9F702C7F4FC900D57A65 /* Post.swift in Sources */,
 				E77824D42C78D6BC00B55618 /* BeHealthApp.swift in Sources */,
-				E9EB9F632C7F43CB00D57A65 /* perfilView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -299,6 +307,10 @@
 			isa = PBXTargetDependency;
 			target = E77824CF2C78D6BC00B55618 /* BeHealth */;
 			targetProxy = E77824EB2C78D6BE00B55618 /* PBXContainerItemProxy */;
+		};
+		E9EB9F682C7F4D5500D57A65 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			productRef = E9EB9F672C7F4D5500D57A65 /* SwiftLintBuildToolPlugin */;
 		};
 /* End PBXTargetDependency section */
 
@@ -590,6 +602,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		E9EB9F662C7F4D3100D57A65 /* XCRemoteSwiftPackageReference "SwiftLint" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/realm/SwiftLint.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.56.2;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		E9EB9F672C7F4D5500D57A65 /* SwiftLintBuildToolPlugin */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E9EB9F662C7F4D3100D57A65 /* XCRemoteSwiftPackageReference "SwiftLint" */;
+			productName = "plugin:SwiftLintBuildToolPlugin";
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = E77824C82C78D6BC00B55618 /* Project object */;
 }

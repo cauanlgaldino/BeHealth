@@ -8,11 +8,29 @@
 import SwiftUI
 
 struct Post: View {
-    var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        var postTitle: String
+        var postContent: String
+
+        var body: some View {
+            VStack(alignment: .leading, spacing: 10) {
+                Text(postTitle)
+                    .font(.headline)
+                    .foregroundColor(.iconcolor)
+                Text(postContent)
+                    .font(.body)
+                    .foregroundColor(.black)
+                    .lineLimit(2)
+              Divider()
+            }
+            .padding()
+            .background(Color(.tabcolor))
+            .cornerRadius(8)
+            .shadow(radius: 3)
+        }
     }
-}
 
 #Preview {
-    Post()
+    Post(
+    postTitle: "Título do Post", postContent:
+        "Este é o conteúdo do post. Ele será exibido com uma linha de limite de texto para evitar sobreposição.")
 }

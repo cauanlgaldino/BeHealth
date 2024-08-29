@@ -9,7 +9,7 @@ import SwiftUI
 
 struct perfilView: View {
     var body: some View {
-        ZStack{
+        ZStack {
             Color.backgroundcolor
                 .ignoresSafeArea()
             ScrollView {
@@ -34,12 +34,21 @@ struct perfilView: View {
                  """)
                     .fontDesign(.rounded)
                     .font(.system(size: 16, design: .rounded))
-                    .foregroundColor(.black)
+                    .foregroundColor(.iconcolor)
                     .multilineTextAlignment(.center)
                     .padding(.horizontal, 40)
                     .padding(.top, 10)
-                    
-                    HStack(spacing: 40) {
+                    HStack(spacing: 30) {
+                        VStack {
+                            Text("3")
+                                .font(.system(size: 22, weight: .bold, design: .rounded))
+                                .foregroundStyle(.iconcolor)
+                            Text("Posts")
+                                .font(.system(size: 14, design: .rounded))
+                                .foregroundColor(.black)
+                                .bold()
+                                .fontDesign(.rounded)
+                        }
                         VStack {
                             Text("12")
                                 .font(.system(size: 22, weight: .bold, design: .rounded))
@@ -50,7 +59,6 @@ struct perfilView: View {
                                 .bold()
                                 .fontDesign(.rounded)
                         }
-                        
                         VStack {
                             Text("5")
                                 .font(.system(size: 22, weight: .bold, design: .rounded))
@@ -61,21 +69,21 @@ struct perfilView: View {
                                 .bold()
                                 .fontDesign(.rounded)
                         }
+
                     }
                     .padding(.top, 20)
-                    HStack(spacing: 20) {
+                    HStack(spacing: 20.0) {
                             ForEach(0..<3) { index in
-                                postMV(postTitle: "Post \(index + 1)", postContent: "Este é o conteúdo do post número \(index + 1).")
+                            postMV(postTitle: "Post \(index + 1)", 
+                                   postContent: "Este é o conteúdo do post número \(index + 1).")
                             }
                         }
                     .padding(.horizontal)
                     .padding(.top, 20)
-                    .background(Color.white)
-                    .cornerRadius(0)
+                    .background(Color.backgroundcolor)
+                   // .cornerRadius(0)
                     .shadow(radius: 0)
-                    
                     Spacer()
-                    
                 }
             }
         }
