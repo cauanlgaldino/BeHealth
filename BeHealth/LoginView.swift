@@ -30,9 +30,9 @@ struct LoginView: View {
                    .foregroundStyle(.iconcolor)
                     .fontWeight(.semibold)
                 usernameTxtVw
-                .padding()
+                .padding(.horizontal,10)
                 passwordTxtVw
-                .padding(/*@START_MENU_TOKEN@*/EdgeInsets()/*@END_MENU_TOKEN@*/)
+                .padding(.horizontal,10)
                 submitBtn
             }
             .ignoresSafeArea()
@@ -82,6 +82,7 @@ private extension LoginView {
                     .stroke(Color.iconcolor, lineWidth: 2)
                     .frame(width: 300, height: 35)
             )
+            .padding()
     }
     var submitBtn: some View {
         Button(action: submit) {

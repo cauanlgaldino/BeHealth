@@ -20,16 +20,17 @@ struct Start: View {
                     NavigationLink(destination: LoginView()) {
                         VStack(alignment: .leading) {
                             Text("Criar Usuario").bold()
-                                .frame(width: 200, height: 50, alignment: .center)
+                                .frame(width: 300, height: 50, alignment: .center)
                                 .background(Color.tabcolor)
                                 .foregroundColor(.iconcolor)
                                 .cornerRadius(8)
                         }
                     }
+                    .padding()
                     NavigationLink(destination: LoginView()) {
                         VStack(alignment: .leading) {
                             Text("Login").bold()
-                                .frame(width: 200, height: 50, alignment: .center)
+                                .frame(width: 300, height: 50, alignment: .center)
                                 .background(Color.iconcolor)
                                 .foregroundColor(.tabcolor)
                                 .cornerRadius(8)
