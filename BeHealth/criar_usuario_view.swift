@@ -21,61 +21,104 @@ struct criar_usuario_view: View {
     
     var body: some View {
         NavigationView {
-            VStack {
-                Form {
-                    Section (header: Text("Dados Pessoais")) {
-                        TextField ("Nome",
-                                   text: $viewModel.nome)
-                        TextField ("Sobrenome",
-                                   text: $viewModel.sobrenome)
-                    }
-                    
-                    Section (header: Text("Usuário"), footer: Text("Seu nome de usuário deve conter pelo menos 5 caracteres")){
-                        
-                        TextField ("Nome de Usuário", text:
+            ZStack {
+                Color.white
+                    .ignoresSafeArea()
+                VStack {
+                            TextField ("Nome",
+                                       text: $viewModel.nome)
+                            .frame(width: 300, height: 40)
+                            .background(Color.white)
+                            .cornerRadius(8)
+                            .foregroundColor(.blue)
+                            .overlay(
+                            RoundedRectangle(cornerRadius: 10)
+                                .stroke(Color.iconcolor, lineWidth: 2)
+                                .frame(width: 300, height: 40)
+                            )
+                            TextField ("Sobrenome",
+                                       text: $viewModel.sobrenome)
+                                .frame(width: 300, height: 40, alignment: .center)
+                                .background(Color.white)
+                                .cornerRadius(8)
+                                .overlay(
+                                    RoundedRectangle(cornerRadius: 10)
+                                        .stroke(Color.iconcolor, lineWidth: 2)
+                                        .frame(width: 300, height: 40)
+                                )
+                                .padding()
+                            TextField ("Nome de Usuário", text:
                                         $viewModel.usuario)
-                        
-                }
+                            .frame(width: 300, height: 35, alignment: .center)
+                            .background(Color.white)
+                            .cornerRadius(8)
+                            .overlay(
+                                RoundedRectangle(cornerRadius: 10)
+                                    .stroke(Color.iconcolor, lineWidth: 2)
+                                    .frame(width: 300, height: 40)
+                            )
+                            .padding()
+                           SecureField ("Criar Senha", text:
+                                            $viewModel.senha)
+                            .frame(width: 300, height: 40, alignment: .center)
+                            .background(Color.white)
+                            .cornerRadius(8)
+                            .overlay(
+                                RoundedRectangle(cornerRadius: 10)
+                                    .stroke(Color.iconcolor, lineWidth: 2)
+                                    .frame(width: 300, height: 40)
+                            )
+                            SecureField ("Confirmar Senha", text:
+                                            $viewModel.confirmarSenha)
+                            .frame(width: 300, height: 40, alignment: .center)
+                            .background(Color.white)
+                            .cornerRadius(8)
+                            .overlay(
+                                RoundedRectangle(cornerRadius: 10)
+                                    .stroke(Color.iconcolor, lineWidth: 2)
+                                    .frame(width: 300, height: 40)
+                            )
                     
-                    Section (header: Text("Senha"), footer: Text("Sua senha deve conter pelo menos 5 caracteres")){
-                        
-                        SecureField ("Criar Senha", text:
-                                        $viewModel.senha)
-                        SecureField ("Confirmar Senha", text:
-                                        $viewModel.confirmarSenha)
-                }
-                    
-                    
-                    
-                }
-                
-                Button (action: {
-                    
-                }, label: {
-                    Text("Continuar")
-                        .frame(width: 200,
-                               height: 50,
-                               alignment: .center)
-                        .background(Color.blue)
-                        .foregroundColor(.white)
-                        .cornerRadius (8)
-                })
-
-                
+                  Button (action: {
+                    }, label: {
+                        Text("Continuar")
+                            .frame(width: 200,
+                                   height: 50,
+                                   alignment: .center)
+                            .background(Color.tabcolor)
+                            .foregroundColor(.iconcolor)
+                            .cornerRadius (8)
+                            .bold()
+                            .fontDesign(.rounded)
+                    })
+                }.ignoresSafeArea()
+                    .padding(20)
+                    .textFieldStyle(.roundedBorder)
+                    .disableAutocorrection(true)
+                    .textInputAutocapitalization(.never)
+                .toolbar {
+                    ToolbarItem(placement: .topBarLeading) {
+                                    Text("Criar conta")
+                                        .font(.system(size: 32))
+                                        .foregroundColor(.iconcolor)
+                                        .bold()
+                                        .fontDesign(.rounded)
+                                }
+                            }
+                .foregroundColor(.iconcolor)
             }
-            .navigationTitle("Criar Conta")
-        }
-        
+        }.scrollContentBackground(.hidden)
     }
-}
-
-struct ContentView_Previews: PreviewProvider {
-    static var previews: some View {
-        ContentView()
-            .preferredColorScheme(.dark)
+    
+    struct ContentView_Previews: PreviewProvider {
+        static var previews: some View {
+            criar_usuario_view()
+                .preferredColorScheme(.light)
+        }
     }
 }
 
 #Preview {
     criar_usuario_view()
 }
+
