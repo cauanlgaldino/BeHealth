@@ -17,6 +17,9 @@
 		E9EB9F6E2C7F4F1F00D57A65 /* PerfilPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9EB9F6D2C7F4F1F00D57A65 /* PerfilPage.swift */; };
 		E9EB9F702C7F4FC900D57A65 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9EB9F6F2C7F4FC900D57A65 /* Post.swift */; };
 		E9EB9F722C7FD64700D57A65 /* ConfigPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9EB9F712C7FD64700D57A65 /* ConfigPage.swift */; };
+		E90E5EBE2C7CAAF700E27B41 /* Login.swift in Sources */ = {isa = PBXBuildFile; fileRef = E90E5EBD2C7CAAF700E27B41 /* Login.swift */; };
+		E9EB9F5A2C7DF01100D57A65 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9EB9F592C7DF01100D57A65 /* LoginView.swift */; };
+		E9EB9F5F2C7DF94B00D57A65 /* Start.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9EB9F5E2C7DF94B00D57A65 /* Start.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +53,9 @@
 		E9EB9F6D2C7F4F1F00D57A65 /* PerfilPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PerfilPage.swift; sourceTree = "<group>"; };
 		E9EB9F6F2C7F4FC900D57A65 /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 		E9EB9F712C7FD64700D57A65 /* ConfigPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigPage.swift; sourceTree = "<group>"; };
+		E90E5EBD2C7CAAF700E27B41 /* Login.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Login.swift; sourceTree = "<group>"; };
+		E9EB9F592C7DF01100D57A65 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		E9EB9F5E2C7DF94B00D57A65 /* Start.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Start.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +108,9 @@
 			children = (
 				E77824D32C78D6BC00B55618 /* BeHealthApp.swift */,
 				E77824D52C78D6BC00B55618 /* ContentView.swift */,
+				E9EB9F5E2C7DF94B00D57A65 /* Start.swift */,
+				E90E5EBD2C7CAAF700E27B41 /* Login.swift */,
+				E9EB9F592C7DF01100D57A65 /* LoginView.swift */,
 				E77824D72C78D6BE00B55618 /* Assets.xcassets */,
 				E77824D92C78D6BE00B55618 /* Preview Content */,
 				E9EB9F6D2C7F4F1F00D57A65 /* PerfilPage.swift */,
@@ -274,6 +283,10 @@
 				E9EB9F722C7FD64700D57A65 /* ConfigPage.swift in Sources */,
 				E77824D62C78D6BC00B55618 /* ContentView.swift in Sources */,
 				E9EB9F702C7F4FC900D57A65 /* Post.swift in Sources */,
+				E90E5EBE2C7CAAF700E27B41 /* Login.swift in Sources */,
+				E77824D62C78D6BC00B55618 /* ContentView.swift in Sources */,
+				E9EB9F5A2C7DF01100D57A65 /* LoginView.swift in Sources */,
+				E9EB9F5F2C7DF94B00D57A65 /* Start.swift in Sources */,
 				E77824D42C78D6BC00B55618 /* BeHealthApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -442,6 +455,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"BeHealth/Preview Content\"";
+				DEVELOPMENT_TEAM = RDBBF5GZZ8;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -470,6 +484,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"BeHealth/Preview Content\"";
+				DEVELOPMENT_TEAM = RDBBF5GZZ8;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
