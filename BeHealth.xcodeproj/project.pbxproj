@@ -147,7 +147,6 @@
 			buildRules = (
 			);
 			dependencies = (
-				3672398B2C7DF83C00785F48 /* PBXTargetDependency */,
 			);
 			name = BeHealth;
 			productName = BeHealth;
@@ -294,10 +293,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		3672398B2C7DF83C00785F48 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			productRef = 3672398A2C7DF83C00785F48 /* SwiftLintBuildToolPlugin */;
-		};
 		E77824E22C78D6BE00B55618 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = E77824CF2C78D6BC00B55618 /* BeHealth */;
@@ -609,14 +604,6 @@
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
-
-/* Begin XCSwiftPackageProductDependency section */
-		3672398A2C7DF83C00785F48 /* SwiftLintBuildToolPlugin */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 367239892C7DF81600785F48 /* XCRemoteSwiftPackageReference "SwiftLint" */;
-			productName = "plugin:SwiftLintBuildToolPlugin";
-		};
-/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = E77824C82C78D6BC00B55618 /* Project object */;
 }
