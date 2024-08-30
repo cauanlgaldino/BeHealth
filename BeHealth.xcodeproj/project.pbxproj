@@ -14,6 +14,9 @@
 		E77824E52C78D6BE00B55618 /* BeHealthTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E77824E42C78D6BE00B55618 /* BeHealthTests.swift */; };
 		E77824EF2C78D6BE00B55618 /* BeHealthUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E77824EE2C78D6BE00B55618 /* BeHealthUITests.swift */; };
 		E77824F12C78D6BE00B55618 /* BeHealthUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E77824F02C78D6BE00B55618 /* BeHealthUITestsLaunchTests.swift */; };
+		E90E5EBE2C7CAAF700E27B41 /* Login.swift in Sources */ = {isa = PBXBuildFile; fileRef = E90E5EBD2C7CAAF700E27B41 /* Login.swift */; };
+		E9EB9F5A2C7DF01100D57A65 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9EB9F592C7DF01100D57A65 /* LoginView.swift */; };
+		E9EB9F5F2C7DF94B00D57A65 /* Start.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9EB9F5E2C7DF94B00D57A65 /* Start.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +47,9 @@
 		E77824EA2C78D6BE00B55618 /* BeHealthUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BeHealthUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E77824EE2C78D6BE00B55618 /* BeHealthUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeHealthUITests.swift; sourceTree = "<group>"; };
 		E77824F02C78D6BE00B55618 /* BeHealthUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeHealthUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		E90E5EBD2C7CAAF700E27B41 /* Login.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Login.swift; sourceTree = "<group>"; };
+		E9EB9F592C7DF01100D57A65 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		E9EB9F5E2C7DF94B00D57A65 /* Start.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Start.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +102,9 @@
 			children = (
 				E77824D32C78D6BC00B55618 /* BeHealthApp.swift */,
 				E77824D52C78D6BC00B55618 /* ContentView.swift */,
+				E9EB9F5E2C7DF94B00D57A65 /* Start.swift */,
+				E90E5EBD2C7CAAF700E27B41 /* Login.swift */,
+				E9EB9F592C7DF01100D57A65 /* LoginView.swift */,
 				E77824D72C78D6BE00B55618 /* Assets.xcassets */,
 				E77824D92C78D6BE00B55618 /* Preview Content */,
 			);
@@ -141,6 +150,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				E9EB9F5D2C7DF71800D57A65 /* PBXTargetDependency */,
 			);
 			name = BeHealth;
 			productName = BeHealth;
@@ -215,6 +225,9 @@
 				Base,
 			);
 			mainGroup = E77824C72C78D6BC00B55618;
+			packageReferences = (
+				E9EB9F5B2C7DF58C00D57A65 /* XCRemoteSwiftPackageReference "SwiftLint" */,
+			);
 			productRefGroup = E77824D12C78D6BC00B55618 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -257,7 +270,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E90E5EBE2C7CAAF700E27B41 /* Login.swift in Sources */,
 				E77824D62C78D6BC00B55618 /* ContentView.swift in Sources */,
+				E9EB9F5A2C7DF01100D57A65 /* LoginView.swift in Sources */,
+				E9EB9F5F2C7DF94B00D57A65 /* Start.swift in Sources */,
 				E77824D42C78D6BC00B55618 /* BeHealthApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -291,6 +307,10 @@
 			isa = PBXTargetDependency;
 			target = E77824CF2C78D6BC00B55618 /* BeHealth */;
 			targetProxy = E77824EB2C78D6BE00B55618 /* PBXContainerItemProxy */;
+		};
+		E9EB9F5D2C7DF71800D57A65 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			productRef = E9EB9F5C2C7DF71800D57A65 /* SwiftLintBuildToolPlugin */;
 		};
 /* End PBXTargetDependency section */
 
@@ -422,6 +442,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"BeHealth/Preview Content\"";
+				DEVELOPMENT_TEAM = RDBBF5GZZ8;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -450,6 +471,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"BeHealth/Preview Content\"";
+				DEVELOPMENT_TEAM = RDBBF5GZZ8;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -582,6 +604,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		E9EB9F5B2C7DF58C00D57A65 /* XCRemoteSwiftPackageReference "SwiftLint" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/realm/SwiftLint.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.56.2;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		E9EB9F5C2C7DF71800D57A65 /* SwiftLintBuildToolPlugin */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E9EB9F5B2C7DF58C00D57A65 /* XCRemoteSwiftPackageReference "SwiftLint" */;
+			productName = "plugin:SwiftLintBuildToolPlugin";
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = E77824C82C78D6BC00B55618 /* Project object */;
 }
