@@ -6,8 +6,31 @@
 //
 
 import SwiftUI
+
 struct ContentView: View {
+    @State var showSplash: Bool = false
+
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        ZStack {
+            if self.showSplash {
+                TabView {
+
+                        FeedView()
+                        .tabItem {
+                            Label("Inicio", systemImage: "house.fill")
+                        }
+
+                }
+                .tint(.iconcolor)
+            }         }
+        .onAppear {
+            UITabBar.appearance().backgroundColor = .tabcolor
+            DispatchQueue.main.asyncAfter(deadline: .now() + 2.0) {
+                withAnimation { self.showSplash = true }
+            }
+        }
     }
+}
+#Preview {
+    ContentView()
 }

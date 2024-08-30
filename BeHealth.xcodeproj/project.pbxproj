@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		77D7F5BE2C81F58000AAA227 /* FeedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77D7F5BD2C81F58000AAA227 /* FeedView.swift */; };
+		77D7F5C22C81F60A00AAA227 /* PostView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77D7F5C12C81F60A00AAA227 /* PostView.swift */; };
 		E77824D42C78D6BC00B55618 /* BeHealthApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E77824D32C78D6BC00B55618 /* BeHealthApp.swift */; };
 		E77824D62C78D6BC00B55618 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E77824D52C78D6BC00B55618 /* ContentView.swift */; };
 		E77824D82C78D6BE00B55618 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E77824D72C78D6BE00B55618 /* Assets.xcassets */; };
@@ -14,12 +16,12 @@
 		E77824E52C78D6BE00B55618 /* BeHealthTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E77824E42C78D6BE00B55618 /* BeHealthTests.swift */; };
 		E77824EF2C78D6BE00B55618 /* BeHealthUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E77824EE2C78D6BE00B55618 /* BeHealthUITests.swift */; };
 		E77824F12C78D6BE00B55618 /* BeHealthUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E77824F02C78D6BE00B55618 /* BeHealthUITestsLaunchTests.swift */; };
-		E9EB9F6E2C7F4F1F00D57A65 /* PerfilPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9EB9F6D2C7F4F1F00D57A65 /* PerfilPage.swift */; };
-		E9EB9F702C7F4FC900D57A65 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9EB9F6F2C7F4FC900D57A65 /* Post.swift */; };
-		E9EB9F722C7FD64700D57A65 /* ConfigPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9EB9F712C7FD64700D57A65 /* ConfigPage.swift */; };
 		E90E5EBE2C7CAAF700E27B41 /* Login.swift in Sources */ = {isa = PBXBuildFile; fileRef = E90E5EBD2C7CAAF700E27B41 /* Login.swift */; };
 		E9EB9F5A2C7DF01100D57A65 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9EB9F592C7DF01100D57A65 /* LoginView.swift */; };
 		E9EB9F5F2C7DF94B00D57A65 /* Start.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9EB9F5E2C7DF94B00D57A65 /* Start.swift */; };
+		E9EB9F6E2C7F4F1F00D57A65 /* PerfilPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9EB9F6D2C7F4F1F00D57A65 /* PerfilPage.swift */; };
+		E9EB9F702C7F4FC900D57A65 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9EB9F6F2C7F4FC900D57A65 /* Post.swift */; };
+		E9EB9F722C7FD64700D57A65 /* ConfigPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9EB9F712C7FD64700D57A65 /* ConfigPage.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +42,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		77D7F5BD2C81F58000AAA227 /* FeedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedView.swift; sourceTree = "<group>"; };
+		77D7F5C12C81F60A00AAA227 /* PostView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostView.swift; sourceTree = "<group>"; };
 		E77824D02C78D6BC00B55618 /* BeHealth.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BeHealth.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E77824D32C78D6BC00B55618 /* BeHealthApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeHealthApp.swift; sourceTree = "<group>"; };
 		E77824D52C78D6BC00B55618 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -50,12 +54,12 @@
 		E77824EA2C78D6BE00B55618 /* BeHealthUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BeHealthUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E77824EE2C78D6BE00B55618 /* BeHealthUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeHealthUITests.swift; sourceTree = "<group>"; };
 		E77824F02C78D6BE00B55618 /* BeHealthUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeHealthUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		E9EB9F6D2C7F4F1F00D57A65 /* PerfilPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PerfilPage.swift; sourceTree = "<group>"; };
-		E9EB9F6F2C7F4FC900D57A65 /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
-		E9EB9F712C7FD64700D57A65 /* ConfigPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigPage.swift; sourceTree = "<group>"; };
 		E90E5EBD2C7CAAF700E27B41 /* Login.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Login.swift; sourceTree = "<group>"; };
 		E9EB9F592C7DF01100D57A65 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		E9EB9F5E2C7DF94B00D57A65 /* Start.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Start.swift; sourceTree = "<group>"; };
+		E9EB9F6D2C7F4F1F00D57A65 /* PerfilPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PerfilPage.swift; sourceTree = "<group>"; };
+		E9EB9F6F2C7F4FC900D57A65 /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
+		E9EB9F712C7FD64700D57A65 /* ConfigPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigPage.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +87,36 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		77D7F5BA2C81F34000AAA227 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				77D7F5BD2C81F58000AAA227 /* FeedView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		77D7F5BB2C81F34F00AAA227 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		77D7F5BC2C81F35600AAA227 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		77D7F5C02C81F5F200AAA227 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				77D7F5C12C81F60A00AAA227 /* PostView.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
 		E77824C72C78D6BC00B55618 = {
 			isa = PBXGroup;
 			children = (
@@ -106,6 +140,10 @@
 		E77824D22C78D6BC00B55618 /* BeHealth */ = {
 			isa = PBXGroup;
 			children = (
+				77D7F5C02C81F5F200AAA227 /* Utils */,
+				77D7F5BC2C81F35600AAA227 /* ViewModel */,
+				77D7F5BB2C81F34F00AAA227 /* Model */,
+				77D7F5BA2C81F34000AAA227 /* View */,
 				E77824D32C78D6BC00B55618 /* BeHealthApp.swift */,
 				E77824D52C78D6BC00B55618 /* ContentView.swift */,
 				E9EB9F5E2C7DF94B00D57A65 /* Start.swift */,
@@ -155,6 +193,7 @@
 				E77824CC2C78D6BC00B55618 /* Sources */,
 				E77824CD2C78D6BC00B55618 /* Frameworks */,
 				E77824CE2C78D6BC00B55618 /* Resources */,
+				77D7F5B92C81F1DF00AAA227 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -235,7 +274,6 @@
 			);
 			mainGroup = E77824C72C78D6BC00B55618;
 			packageReferences = (
-				E9EB9F662C7F4D3100D57A65 /* XCRemoteSwiftPackageReference "SwiftLint" */,
 			);
 			productRefGroup = E77824D12C78D6BC00B55618 /* Products */;
 			projectDirPath = "";
@@ -274,11 +312,33 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		77D7F5B92C81F1DF00AAA227 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\nif [[ \"$(uname -m)\" == arm64 ]]\nthen\n    export PATH=\"/opt/homebrew/bin:$PATH\"\nfi\n\nif command -v swiftlint >/dev/null 2>&1\nthen\n    swiftlint\nelse\n    echo \"warning: swiftlint command not found - See https://github.com/realm/SwiftLint#installation for installation instructions.\"\nfi\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		E77824CC2C78D6BC00B55618 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				77D7F5BE2C81F58000AAA227 /* FeedView.swift in Sources */,
 				E9EB9F6E2C7F4F1F00D57A65 /* PerfilPage.swift in Sources */,
 				E9EB9F722C7FD64700D57A65 /* ConfigPage.swift in Sources */,
 				E77824D62C78D6BC00B55618 /* ContentView.swift in Sources */,
@@ -288,6 +348,7 @@
 				E9EB9F5A2C7DF01100D57A65 /* LoginView.swift in Sources */,
 				E9EB9F5F2C7DF94B00D57A65 /* Start.swift in Sources */,
 				E77824D42C78D6BC00B55618 /* BeHealthApp.swift in Sources */,
+				77D7F5C22C81F60A00AAA227 /* PostView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -455,8 +516,9 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"BeHealth/Preview Content\"";
-				DEVELOPMENT_TEAM = RDBBF5GZZ8;
+				DEVELOPMENT_TEAM = W8HS7RX76D;
 				ENABLE_PREVIEWS = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -484,8 +546,9 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"BeHealth/Preview Content\"";
-				DEVELOPMENT_TEAM = RDBBF5GZZ8;
+				DEVELOPMENT_TEAM = W8HS7RX76D;
 				ENABLE_PREVIEWS = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;

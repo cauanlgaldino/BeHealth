@@ -7,7 +7,7 @@
 
 import Foundation
 
-class loginViewModel: ObservableObject{
+class LoginViewModel: ObservableObject{
     @Published var credentials = Credentials
     @Published var showProgressView = false
     
