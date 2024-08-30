@@ -7,13 +7,13 @@
 
 import SwiftUI
 
-class FormViewModel: ObservableObject {
-    @State var nome = ""
-    @State var sobrenome = ""
-    @State var senha = ""
-    @State var confirmarSenha = ""
-    @State var usuario = ""
-}
+//class FormViewModel: ObservableObject {
+//    @State var nome = ""
+//    @State var sobrenome = ""
+//    @State var senha = ""
+//    @State var confirmarSenha = ""
+//    @State var usuario = ""
+//}
 
 struct criar_usuario_view: View {
     
