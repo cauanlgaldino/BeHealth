@@ -80,7 +80,7 @@ struct VisualizarPerfil: View {
                                 .font(.system(size: 16, weight: .bold, design: .rounded))
                                 .foregroundColor(isFollowing ? .tabcolor : .iconcolor)
                                 .padding()
-                                .frame(width: 120)
+                                .frame(width: 300)
                                 .background(isFollowing ? Color.iconcolor : Color.tabcolor)
                                 .cornerRadius(20)
                                 .overlay(
