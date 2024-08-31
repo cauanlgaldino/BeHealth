@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		368F86B72C7E008F00BDFF0B /* CriarUsuarioView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 368F86B62C7E008F00BDFF0B /* CriarUsuarioView.swift */; };
 		E77824D42C78D6BC00B55618 /* BeHealthApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E77824D32C78D6BC00B55618 /* BeHealthApp.swift */; };
-		E77824D62C78D6BC00B55618 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E77824D52C78D6BC00B55618 /* ContentView.swift */; };
 		E77824D82C78D6BE00B55618 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E77824D72C78D6BE00B55618 /* Assets.xcassets */; };
 		E77824DB2C78D6BE00B55618 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E77824DA2C78D6BE00B55618 /* Preview Assets.xcassets */; };
 		E77824E52C78D6BE00B55618 /* BeHealthTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E77824E42C78D6BE00B55618 /* BeHealthTests.swift */; };
@@ -39,7 +38,6 @@
 		368F86B62C7E008F00BDFF0B /* CriarUsuarioView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CriarUsuarioView.swift; sourceTree = "<group>"; };
 		E77824D02C78D6BC00B55618 /* BeHealth.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BeHealth.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E77824D32C78D6BC00B55618 /* BeHealthApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeHealthApp.swift; sourceTree = "<group>"; };
-		E77824D52C78D6BC00B55618 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		E77824D72C78D6BE00B55618 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E77824DA2C78D6BE00B55618 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		E77824E02C78D6BE00B55618 /* BeHealthTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BeHealthTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -101,7 +99,6 @@
 				E77824D32C78D6BC00B55618 /* BeHealthApp.swift */,
 				368F86B62C7E008F00BDFF0B /* CriarUsuarioView.swift */,
 				E9F82C0F2C814F2300C1B6DD /* Criar_usuario_view.swift */,
-				E77824D52C78D6BC00B55618 /* ContentView.swift */,
 				E77824D72C78D6BE00B55618 /* Assets.xcassets */,
 				E77824D92C78D6BE00B55618 /* Preview Content */,
 			);
@@ -266,7 +263,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E77824D62C78D6BC00B55618 /* ContentView.swift in Sources */,
 				E9F82C102C814F2400C1B6DD /* Criar_usuario_view.swift in Sources */,
 				368F86B72C7E008F00BDFF0B /* CriarUsuarioView.swift in Sources */,
 				E77824D42C78D6BC00B55618 /* BeHealthApp.swift in Sources */,
