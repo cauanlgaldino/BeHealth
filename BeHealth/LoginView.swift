@@ -30,9 +30,9 @@ struct LoginView: View {
                    .foregroundStyle(.iconcolor)
                     .fontWeight(.semibold)
                 usernameTxtVw
-                .padding(.horizontal,10)
+                .padding(.horizontal, 10)
                 passwordTxtVw
-                .padding(.horizontal,10)
+                .padding(.horizontal, 10)
                 submitBtn
             }
             .ignoresSafeArea()

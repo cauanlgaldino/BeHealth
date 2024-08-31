@@ -9,7 +9,6 @@ import SwiftUI
 
 struct VisualizarPerfil: View {
     @State private var isFollowing = false
-    
     var body: some View {
         NavigationStack {
             ZStack {
@@ -27,11 +26,9 @@ struct VisualizarPerfil: View {
                             )
                             .shadow(radius: 10)
                             .padding(.top, 30)
-                        
                         Text("Gisele Albuquerque")
                             .font(.system(size: 28, weight: .bold, design: .rounded))
                             .foregroundColor(.iconcolor)
-                        
                         Text("""
                              Odonto 🦷
                              Vida fitness🏃‍♀️💪
@@ -77,7 +74,8 @@ struct VisualizarPerfil: View {
                         .padding(.top, 20)
                         Button(action: {
                             isFollowing.toggle()
-                        }) {
+                        }) 
+                        {
                             Text(isFollowing ? "Seguindo" : "Seguir")
                                 .font(.system(size: 16, weight: .bold, design: .rounded))
                                 .foregroundColor(isFollowing ? .tabcolor : .iconcolor)
