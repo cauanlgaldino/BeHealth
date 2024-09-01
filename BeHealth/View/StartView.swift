@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct Start: View {
+struct StartView: View {
     @EnvironmentObject var router: Router
     var body: some View {
         ZStack {
@@ -41,5 +41,6 @@ struct Start: View {
     }
 }
 #Preview {
-    Start()
+    StartView()
+        .environmentObject(Router())
 }

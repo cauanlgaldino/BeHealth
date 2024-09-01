@@ -14,7 +14,7 @@ struct BeHealthApp: App {
     var body: some Scene {
         WindowGroup {
             NavigationStack(path: $router.navPath) {
-                Start()
+                StartView()
                     .navigationDestination(for: Router.Destination.self) { destination in
                         switch destination {
                         case .feed:

@@ -1,17 +1,18 @@
 //
-//  PerfilPage.swift
+//  VisualizarPerfil.swift
 //  BeHealth
 //
-//  Created by Joao Roberto Fernandes Magalhaes on 28/08/24.
+//  Created by Joao Roberto Fernandes Magalhaes on 31/08/24.
 //
 
 import SwiftUI
 
-struct PerfilPage: View {
+struct VisualizarPerfil: View {
+    @State private var isFollowing = false
     var body: some View {
         NavigationStack {
             ZStack {
-                Color.backgroundcolor
+                Color.white
                     .ignoresSafeArea()
                 ScrollView {
                     VStack {
@@ -21,21 +22,20 @@ struct PerfilPage: View {
                             .frame(width: 100, height: 100)
                             .clipShape(Circle())
                             .overlay(
-                                Circle().stroke(Color.verdeoliva, lineWidth: 4)
+                                Circle().stroke(Color.iconcolor, lineWidth: 4)
                             )
                             .shadow(radius: 10)
-                            .padding(.top, 50)
-                        Text("Gabriel Silveira")
+                            .padding(.top, 30)
+                        Text("Gisele Albuquerque")
                             .font(.system(size: 28, weight: .bold, design: .rounded))
-                            .padding(.top, 10)
-                            .foregroundColor(.verdeoliva)
+                            .foregroundColor(.iconcolor)
                         Text("""
-                             Contador
-                             Em busca de perder uns quilinhos
+                             Odonto 🦷
+                             Vida fitness🏃‍♀️💪
                              """)
                         .fontDesign(.rounded)
                         .font(.system(size: 16, design: .rounded))
-                        .foregroundColor(.verdeoliva)
+                        .foregroundColor(.iconcolor)
                         .multilineTextAlignment(.center)
                         .padding(.horizontal, 40)
                         .padding(.top, 10)
@@ -51,7 +51,7 @@ struct PerfilPage: View {
                                     .fontDesign(.rounded)
                             }
                             VStack {
-                                Text("12")
+                                Text("1270")
                                     .font(.system(size: 22, weight: .bold, design: .rounded))
                                     .foregroundStyle(.iconcolor)
                                 Text("Seguidores")
@@ -61,7 +61,7 @@ struct PerfilPage: View {
                                     .fontDesign(.rounded)
                             }
                             VStack {
-                                Text("5")
+                                Text("12")
                                     .font(.system(size: 22, weight: .bold, design: .rounded))
                                     .foregroundStyle(.iconcolor)
                                 Text("Seguindo")
@@ -70,7 +70,23 @@ struct PerfilPage: View {
                                     .bold()
                                     .fontDesign(.rounded)
                             }
-                            .border(/*@START_MENU_TOKEN@*/Color.black/*@END_MENU_TOKEN@*/)
+                        }
+                        .padding(.top, 20)
+                        Button(action: {
+                            isFollowing.toggle()
+                        }) 
+                        {
+                            Text(isFollowing ? "Seguindo" : "Seguir")
+                                .font(.system(size: 16, weight: .bold, design: .rounded))
+                                .foregroundColor(isFollowing ? .tabcolor : .iconcolor)
+                                .padding()
+                                .frame(width: 300)
+                                .background(isFollowing ? Color.iconcolor : Color.tabcolor)
+                                .cornerRadius(20)
+                                .overlay(
+                                    RoundedRectangle(cornerRadius: 20)
+                                        .stroke(isFollowing ? Color.iconcolor : Color.iconcolor)
+                                )
                         }
                         .padding(.top, 20)
                         HStack {
@@ -81,24 +97,18 @@ struct PerfilPage: View {
                         }
                         .padding(.horizontal)
                         .padding(.top, 20)
-                        .background(Color.backgroundcolor)
+                        .background(Color.white)
                         .shadow(radius: 0)
                         Spacer()
                     }
                 }
-                }
-                .navigationBarTitleDisplayMode(.inline)
-                .navigationBarItems(trailing: settingsButton)
             }
-        }
-        var settingsButton: some View {
-            NavigationLink(destination: ConfigPage()) {
-                Image(systemName: "line.3.horizontal")
-                    .imageScale(.large)
-                    .foregroundColor(.verdeoliva)
-            }
+            .navigationBarTitleDisplayMode(.inline)
         }
     }
+}
+
+
 #Preview {
-    PerfilPage()
+    VisualizarPerfil()
 }

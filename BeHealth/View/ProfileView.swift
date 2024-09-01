@@ -1,18 +1,17 @@
 //
-//  VisualizarPerfil.swift
+//  PerfilPage.swift
 //  BeHealth
 //
-//  Created by Joao Roberto Fernandes Magalhaes on 31/08/24.
+//  Created by Joao Roberto Fernandes Magalhaes on 28/08/24.
 //
 
 import SwiftUI
 
-struct VisualizarPerfil: View {
-    @State private var isFollowing = false
+struct ProfileView: View {
     var body: some View {
         NavigationStack {
             ZStack {
-                Color.white
+                Color.backgroundcolor
                     .ignoresSafeArea()
                 ScrollView {
                     VStack {
@@ -22,20 +21,21 @@ struct VisualizarPerfil: View {
                             .frame(width: 100, height: 100)
                             .clipShape(Circle())
                             .overlay(
-                                Circle().stroke(Color.iconcolor, lineWidth: 4)
+                                Circle().stroke(Color.verdeoliva, lineWidth: 4)
                             )
                             .shadow(radius: 10)
-                            .padding(.top, 30)
-                        Text("Gisele Albuquerque")
+                            .padding(.top, 50)
+                        Text("Gabriel Silveira")
                             .font(.system(size: 28, weight: .bold, design: .rounded))
-                            .foregroundColor(.iconcolor)
+                            .padding(.top, 10)
+                            .foregroundColor(.verdeoliva)
                         Text("""
-                             Odonto 🦷
-                             Vida fitness🏃‍♀️💪
+                             Contador
+                             Em busca de perder uns quilinhos
                              """)
                         .fontDesign(.rounded)
                         .font(.system(size: 16, design: .rounded))
-                        .foregroundColor(.iconcolor)
+                        .foregroundColor(.verdeoliva)
                         .multilineTextAlignment(.center)
                         .padding(.horizontal, 40)
                         .padding(.top, 10)
@@ -51,7 +51,7 @@ struct VisualizarPerfil: View {
                                     .fontDesign(.rounded)
                             }
                             VStack {
-                                Text("1270")
+                                Text("12")
                                     .font(.system(size: 22, weight: .bold, design: .rounded))
                                     .foregroundStyle(.iconcolor)
                                 Text("Seguidores")
@@ -61,7 +61,7 @@ struct VisualizarPerfil: View {
                                     .fontDesign(.rounded)
                             }
                             VStack {
-                                Text("12")
+                                Text("5")
                                     .font(.system(size: 22, weight: .bold, design: .rounded))
                                     .foregroundStyle(.iconcolor)
                                 Text("Seguindo")
@@ -70,23 +70,7 @@ struct VisualizarPerfil: View {
                                     .bold()
                                     .fontDesign(.rounded)
                             }
-                        }
-                        .padding(.top, 20)
-                        Button(action: {
-                            isFollowing.toggle()
-                        }) 
-                        {
-                            Text(isFollowing ? "Seguindo" : "Seguir")
-                                .font(.system(size: 16, weight: .bold, design: .rounded))
-                                .foregroundColor(isFollowing ? .tabcolor : .iconcolor)
-                                .padding()
-                                .frame(width: 300)
-                                .background(isFollowing ? Color.iconcolor : Color.tabcolor)
-                                .cornerRadius(20)
-                                .overlay(
-                                    RoundedRectangle(cornerRadius: 20)
-                                        .stroke(isFollowing ? Color.iconcolor : Color.iconcolor)
-                                )
+                            .border(/*@START_MENU_TOKEN@*/Color.black/*@END_MENU_TOKEN@*/)
                         }
                         .padding(.top, 20)
                         HStack {
@@ -97,17 +81,25 @@ struct VisualizarPerfil: View {
                         }
                         .padding(.horizontal)
                         .padding(.top, 20)
-                        .background(Color.white)
+                        .background(Color.backgroundcolor)
                         .shadow(radius: 0)
                         Spacer()
                     }
                 }
+                }
+                .navigationBarTitleDisplayMode(.inline)
+                .navigationBarItems(trailing: settingsButton)
             }
-            .navigationBarTitleDisplayMode(.inline)
+        }
+        var settingsButton: some View {
+            NavigationLink(destination: ConfigPage()) {
+                Image(systemName: "line.3.horizontal")
+                    .imageScale(.large)
+                    .foregroundColor(.verdeoliva)
+            }
         }
     }
-}
 
 #Preview {
-    VisualizarPerfil()
+    ProfileView()
 }

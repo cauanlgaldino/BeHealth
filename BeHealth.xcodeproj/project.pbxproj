@@ -26,10 +26,9 @@
 		E77824EF2C78D6BE00B55618 /* BeHealthUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E77824EE2C78D6BE00B55618 /* BeHealthUITests.swift */; };
 		E77824F12C78D6BE00B55618 /* BeHealthUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E77824F02C78D6BE00B55618 /* BeHealthUITestsLaunchTests.swift */; };
 		E902F89E2C83772B003C0384 /* VisualizarPerfil.swift in Sources */ = {isa = PBXBuildFile; fileRef = E902F89D2C83772B003C0384 /* VisualizarPerfil.swift */; };
-		E90E5EBE2C7CAAF700E27B41 /* Login.swift in Sources */ = {isa = PBXBuildFile; fileRef = E90E5EBD2C7CAAF700E27B41 /* Login.swift */; };
 		E9EB9F5A2C7DF01100D57A65 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9EB9F592C7DF01100D57A65 /* LoginView.swift */; };
-		E9EB9F5F2C7DF94B00D57A65 /* Start.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9EB9F5E2C7DF94B00D57A65 /* Start.swift */; };
-		E9EB9F6E2C7F4F1F00D57A65 /* PerfilPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9EB9F6D2C7F4F1F00D57A65 /* PerfilPage.swift */; };
+		E9EB9F5F2C7DF94B00D57A65 /* StartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9EB9F5E2C7DF94B00D57A65 /* StartView.swift */; };
+		E9EB9F6E2C7F4F1F00D57A65 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9EB9F6D2C7F4F1F00D57A65 /* ProfileView.swift */; };
 		E9EB9F702C7F4FC900D57A65 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9EB9F6F2C7F4FC900D57A65 /* Post.swift */; };
 		E9EB9F722C7FD64700D57A65 /* ConfigPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9EB9F712C7FD64700D57A65 /* ConfigPage.swift */; };
 /* End PBXBuildFile section */
@@ -74,10 +73,9 @@
 		E77824EE2C78D6BE00B55618 /* BeHealthUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeHealthUITests.swift; sourceTree = "<group>"; };
 		E77824F02C78D6BE00B55618 /* BeHealthUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeHealthUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		E902F89D2C83772B003C0384 /* VisualizarPerfil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisualizarPerfil.swift; sourceTree = "<group>"; };
-		E90E5EBD2C7CAAF700E27B41 /* Login.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Login.swift; sourceTree = "<group>"; };
 		E9EB9F592C7DF01100D57A65 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
-		E9EB9F5E2C7DF94B00D57A65 /* Start.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Start.swift; sourceTree = "<group>"; };
-		E9EB9F6D2C7F4F1F00D57A65 /* PerfilPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PerfilPage.swift; sourceTree = "<group>"; };
+		E9EB9F5E2C7DF94B00D57A65 /* StartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartView.swift; sourceTree = "<group>"; };
+		E9EB9F6D2C7F4F1F00D57A65 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		E9EB9F6F2C7F4FC900D57A65 /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 		E9EB9F712C7FD64700D57A65 /* ConfigPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigPage.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -129,6 +127,11 @@
 		77D7F5BA2C81F34000AAA227 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				E9EB9F712C7FD64700D57A65 /* ConfigPage.swift */,
+				E9EB9F6D2C7F4F1F00D57A65 /* ProfileView.swift */,
+				E902F89D2C83772B003C0384 /* VisualizarPerfil.swift */,
+				E9EB9F592C7DF01100D57A65 /* LoginView.swift */,
+				E9EB9F5E2C7DF94B00D57A65 /* StartView.swift */,
 				77D7F5BD2C81F58000AAA227 /* FeedView.swift */,
 				774DCA9F2C83DAA700FB82FF /* SearchView.swift */,
 			);
@@ -157,6 +160,7 @@
 			isa = PBXGroup;
 			children = (
 				77D7F5C12C81F60A00AAA227 /* PostView.swift */,
+				E9EB9F6F2C7F4FC900D57A65 /* Post.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -192,14 +196,8 @@
 				77D7F5BA2C81F34000AAA227 /* View */,
 				E77824D32C78D6BC00B55618 /* BeHealthApp.swift */,
 				E77824D52C78D6BC00B55618 /* ContentView.swift */,
-				E9EB9F5E2C7DF94B00D57A65 /* Start.swift */,
-				E9EB9F592C7DF01100D57A65 /* LoginView.swift */,
-				E902F89D2C83772B003C0384 /* VisualizarPerfil.swift */,
 				E77824D72C78D6BE00B55618 /* Assets.xcassets */,
 				E77824D92C78D6BE00B55618 /* Preview Content */,
-				E9EB9F6D2C7F4F1F00D57A65 /* PerfilPage.swift */,
-				E9EB9F6F2C7F4FC900D57A65 /* Post.swift */,
-				E9EB9F712C7FD64700D57A65 /* ConfigPage.swift */,
 			);
 			path = BeHealth;
 			sourceTree = "<group>";
@@ -387,7 +385,7 @@
 				774DCA9A2C8394DC00FB82FF /* Follow.swift in Sources */,
 				77D7F5BE2C81F58000AAA227 /* FeedView.swift in Sources */,
 				774DCA9C2C83952000FB82FF /* FollowService.swift in Sources */,
-				E9EB9F6E2C7F4F1F00D57A65 /* PerfilPage.swift in Sources */,
+				E9EB9F6E2C7F4F1F00D57A65 /* ProfileView.swift in Sources */,
 				E9EB9F722C7FD64700D57A65 /* ConfigPage.swift in Sources */,
 				E77824D62C78D6BC00B55618 /* ContentView.swift in Sources */,
 				E902F89E2C83772B003C0384 /* VisualizarPerfil.swift in Sources */,
@@ -400,7 +398,7 @@
 				774DCA912C8393FD00FB82FF /* User.swift in Sources */,
 				774DCA952C83946C00FB82FF /* KeychainManager.swift in Sources */,
 				774DCA932C83944100FB82FF /* UserViewModel.swift in Sources */,
-				E9EB9F5F2C7DF94B00D57A65 /* Start.swift in Sources */,
+				E9EB9F5F2C7DF94B00D57A65 /* StartView.swift in Sources */,
 				E77824D42C78D6BC00B55618 /* BeHealthApp.swift in Sources */,
 				77D7F5C22C81F60A00AAA227 /* PostView.swift in Sources */,
 			);
