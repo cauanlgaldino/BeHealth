@@ -1,5 +1,9 @@
 {
+<<<<<<< HEAD
   "originHash" : "cbd404ca0c2ea93618e9c88c247b46a2a9af7c9147f6901061215b87bad89702",
+=======
+  "originHash" : "7a2c9b4bb42c2221bb642dfc27b6e8a478d63cd04f52d3e2819330e24f9fb63f",
+>>>>>>> feature_integracao_backend
   "pins" : [
     {
       "identity" : "collectionconcurrencykit",
@@ -47,9 +51,15 @@
       }
     },
     {
+<<<<<<< HEAD
       "identity" : "swiftlint#xcode-projects",
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/realm/SwiftLint#xcode-projects",
+=======
+      "identity" : "swiftlint",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/realm/SwiftLint.git",
+>>>>>>> feature_integracao_backend
       "state" : {
         "revision" : "a24488f26e60247d8fff7bbb03d51910af3dc91c",
         "version" : "0.56.2"

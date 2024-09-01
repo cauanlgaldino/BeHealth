@@ -9,9 +9,28 @@ import SwiftUI
 
 @main
 struct BeHealthApp: App {
+    @ObservedObject var router = Router()
+
     var body: some Scene {
         WindowGroup {
-            Criar_usuario_view()
+            NavigationStack(path: $router.navPath) {
+                StartView()
+                    .navigationDestination(for: Router.Destination.self) { destination in
+                        switch destination {
+                        case .feed:
+                            FeedView()
+                        case .login:
+                            LoginView()
+                        case .settings:
+                            ConfigPage()
+                        case .contentView:
+                            ContentView()
+                        case .searchView:
+                            SearchView()
+                        }
+                    }
+            }
+            .environmentObject(router)
         }
     }
 }
