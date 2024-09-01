@@ -22,7 +22,21 @@ struct PostView: View {
                         Text("@username")
                     }
                     Spacer()
-                    Button {
+                    Menu {
+                        Button(role: .destructive) {
+                        } label: {
+                            HStack {
+                                Image(systemName: "exclamationmark.bubble")
+                                Text("Denunciar")
+                            }
+                        }
+                        Button {
+                        } label: {
+                            HStack {
+                                Image(systemName: "pencil.tip.crop.circle")
+                                Text("Editar")
+                            }
+                        }
                     } label: {
                         Image(systemName: "ellipsis")
                             .resizable()
@@ -30,18 +44,20 @@ struct PostView: View {
                             .frame(width: 16, height: 16)
                     }
                 }
-                .padding(.leading,8)
+                .padding(.leading, 8)
                 .padding(.top, 8)
                 .padding(.trailing, 16)
                 .padding(.bottom, 8)
-                Rectangle()
-                    .fill(.secondary)
+                Image("psyduck")
+                    .resizable()
+                    .scaledToFit()
                 VStack {
                     HStack {
                         Button {
                             liked.toggle()
                         } label: {
                             Image(systemName: liked ? "heart.fill" : "heart")
+                                .foregroundStyle(.verdeoliva)
                         }
                         Text("23")
                             .padding(.trailing, 20)
@@ -62,7 +78,7 @@ struct PostView: View {
         .cornerRadius(10)
         .sheet(isPresented: $comment) {
             CommentView()
-                .presentationDetents([.medium])
+                .presentationDetents([.medium, .large])
                 .presentationDragIndicator(.visible)
         }
     }
@@ -72,9 +88,12 @@ struct PostView: View {
 struct CommentView: View {
     var body: some View {
         NavigationStack {
-            Text("Hello")
-                .navigationTitle("Comentários")
-                .navigationBarTitleDisplayMode(.inline)
+            Divider()
+            ScrollView {
+                Text("Hello")
+                    .navigationTitle("Comentários")
+                    .navigationBarTitleDisplayMode(.inline)
+            }
         }
     }
 }

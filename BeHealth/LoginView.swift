@@ -8,103 +8,141 @@
 import SwiftUI
 
 struct LoginView: View {
-    struct Usuario {
-        var nome: String = ""
-        var senha: String = ""
-    }
-    @State private var usuario: Usuario = .init()
-    @FocusState private var imputFocused: Bool
+    @State var username = ""
+    @State var password = ""
+    @State private var alertMessage = ""
+    @State private var showAlert = false
+    @State var isLoginSuccessful: Bool = false
+    @EnvironmentObject var router: Router
+    @FocusState private var usernameFocused: Bool
+    @FocusState private var passwordFocused: Bool
+    @StateObject private var viewModel = UserViewModel()
     var body: some View {
-    ZStack {
-        Color.white
-           .ignoresSafeArea()
+        ZStack {
             Image("loginscreen")
-             .resizable()
-             .scaledToFill()
-             .frame(width: 480, height: 500)
-            .ignoresSafeArea()
-        VStack {
+                .resizable()
+                .aspectRatio(contentMode: .fill)
+                .containerRelativeFrame([.horizontal, .vertical])
+                .scaleEffect(1.1)
+            VStack(spacing: 20) {
                 Text("Login")
                     .font(.system(size: 32))
                     .fontDesign(.rounded)
-                   .foregroundStyle(.iconcolor)
+                    .foregroundStyle(.iconcolor)
                     .fontWeight(.semibold)
-                usernameTxtVw
-                .padding(.horizontal,10)
-                passwordTxtVw
-                .padding(.horizontal,10)
-                submitBtn
+                usernameTextField
+                passwordTextField
+                loginButton
             }
-            .ignoresSafeArea()
-            .padding(20)
-            .textFieldStyle(.roundedBorder)
-            .disableAutocorrection(true)
-            .textInputAutocapitalization(.never)
+            .padding(32)
             .toolbar {
                 ToolbarItemGroup(placement: .keyboard) {
                     Spacer()
-                    Button(action: resignKeyboard) {
+                    Button {
+                        dismissKeyboard()
+                    } label: {
                         Text("OK")
                     }
                     .buttonStyle(.borderless)
-                    .border(.secondary)
                 }
             }
-            .onSubmit(of: .text, submit)
         }
     }
 }
 
 private extension LoginView {
-    var usernameTxtVw: some View {
-        TextField("Usuario", text: $usuario.nome, prompt: Text("Insira seu username").foregroundColor(.iconcolor))
+    var usernameTextField: some View {
+        TextField("Insira seu username", text: $username)
+            .padding(12)
+            .autocapitalization(.none)
+            .disableAutocorrection(true)
+            .foregroundColor(.verdeoliva)
             .textContentType(.username)
-            .focused($imputFocused)
-            .frame(width: 300, height: 50)
-            .background(Color.white)
-            .cornerRadius(8)
+            .textFieldStyle(.plain)
+            .focused($usernameFocused)
+            .submitLabel(.next)
+            .onSubmit {
+                passwordFocused = true
+            }
             .overlay(
                 RoundedRectangle(cornerRadius: 10)
-                    .stroke(Color.iconcolor, lineWidth: 2)
-                    .frame(width: 300, height: 35)
+                    .stroke(Color.verdeoliva, lineWidth: 2)
             )
     }
-    var passwordTxtVw: some View {
-        SecureField("Usuario", text: $usuario.senha, prompt: Text("Insira sua senha").foregroundColor(.iconcolor))
+    var passwordTextField: some View {
+        SecureField("Insira sua senha", text: $password)
+            .padding(12)
+            .autocapitalization(.none)
+            .disableAutocorrection(true)
+            .foregroundColor(.verdeoliva)
             .textContentType(.password)
-            .focused($imputFocused)
-            .submitLabel(.done)
-            .frame(width: 300, height: 50, alignment: .center)
+            .focused($passwordFocused)
+            .submitLabel(.go)
+            .onSubmit {
+                submit()
+            }
             .background(Color.white)
             .cornerRadius(8)
             .overlay(
                 RoundedRectangle(cornerRadius: 10)
-                    .stroke(Color.iconcolor, lineWidth: 2)
-                    .frame(width: 300, height: 35)
+                    .stroke(Color.verdeoliva, lineWidth: 2)
             )
-            .padding()
     }
-    var submitBtn: some View {
-        Button(action: submit) {
+    var loginButton: some View {
+        Button {
+            submit()
+        } label: {
             Text("Entrar")
                 .bold()
                 .frame(width: 200, height: 50, alignment: .center)
                 .background(Color.tabcolor)
-                .foregroundColor(.iconcolor)
+                .foregroundColor(.verdeoliva)
                 .cornerRadius(8)
+        }
+        .alert(isPresented: $showAlert) {
+            Alert(
+                title: Text("Erro"),
+                message: Text(alertMessage),
+                dismissButton: .default(Text("Tentar novamente"))
+            )
         }
     }
 }
 private extension LoginView {
     func submit() {
-        print("The user imputted: \(usuario)")
-        resignKeyboard()
-    }
-    func resignKeyboard() { if #available(iOS 15, *) {
-        imputFocused = false
-    } else {
-        dismissKeyboard()
-    }
+        Task {
+            // MARK: Colocar chamada de função
+            let result = await viewModel.loginUser(username: username, password: password)
+            
+            switch result {
+            case .success(let success):
+                if success {
+                    isLoginSuccessful = true
+                    router.navigate(to: .feed)
+                    // Se o login for sucesso, mude o estado para navegar
+                } else {
+                    alertMessage = "Erro inesperado ao fazer login"
+                    showAlert = true
+                }
+            case .failure(let error):
+                switch error {
+                case .userNotFound:
+                    alertMessage = "Usuário não encontrado. Verifique seu nome de usuário."
+                    showAlert = true
+                    usernameFocused = true
+                case .invalidCredentials:
+                    alertMessage = "Credenciais inválidas. Verifique sua senha."
+                    showAlert = true
+                    passwordFocused = true
+                case .keychainError:
+                    alertMessage = "Falha ao salvar token. Tente novamente."
+                    showAlert = true
+                case .networkError(let networkError):
+                    alertMessage = "Erro de rede: \(networkError.localizedDescription)"
+                    showAlert = true
+                }
+            }
+        }
     }
 }
 extension View {
