@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct postMV: View {
+struct PostMV: View {
         var postTitle: String
         var postContent: String
 

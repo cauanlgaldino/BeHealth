@@ -21,21 +21,21 @@ struct PerfilPage: View {
                             .frame(width: 100, height: 100)
                             .clipShape(Circle())
                             .overlay(
-                                Circle().stroke(Color.iconcolor, lineWidth: 4)
+                                Circle().stroke(Color.verdeoliva, lineWidth: 4)
                             )
                             .shadow(radius: 10)
                             .padding(.top, 50)
                         Text("Gabriel Silveira")
                             .font(.system(size: 28, weight: .bold, design: .rounded))
                             .padding(.top, 10)
-                            .foregroundColor(.iconcolor)
+                            .foregroundColor(.verdeoliva)
                         Text("""
                              Contador
                              Em busca de perder uns quilinhos
                              """)
                         .fontDesign(.rounded)
                         .font(.system(size: 16, design: .rounded))
-                        .foregroundColor(.iconcolor)
+                        .foregroundColor(.verdeoliva)
                         .multilineTextAlignment(.center)
                         .padding(.horizontal, 40)
                         .padding(.top, 10)
@@ -70,6 +70,7 @@ struct PerfilPage: View {
                                     .bold()
                                     .fontDesign(.rounded)
                             }
+                            .border(/*@START_MENU_TOKEN@*/Color.black/*@END_MENU_TOKEN@*/)
                         }
                         .padding(.top, 20)
                         HStack {
@@ -94,7 +95,7 @@ struct PerfilPage: View {
             NavigationLink(destination: ConfigPage()) {
                 Image(systemName: "line.3.horizontal")
                     .imageScale(.large)
-                    .foregroundColor(.iconcolor)
+                    .foregroundColor(.verdeoliva)
             }
         }
     }

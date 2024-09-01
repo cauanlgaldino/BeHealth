@@ -24,7 +24,7 @@ Contador\nEm busca de perder uns quilinhos
                     .padding(.horizontal)
                 Form {
                     Section(header: Text("Informações Pessoais")
-                        .foregroundColor(.iconcolor)) {
+                        .foregroundColor(.verdeoliva)) {
                         TextField("Nome", text: $nome)
                             .textFieldStyle(RoundedBorderTextFieldStyle())
                             .background(Color.white)
@@ -33,7 +33,7 @@ Contador\nEm busca de perder uns quilinhos
                             .cornerRadius(8)
                             .overlay(
                                 RoundedRectangle(cornerRadius: 10)
-                                    .stroke(Color.iconcolor, lineWidth: 2)
+                                    .stroke(Color.verdeoliva, lineWidth: 2)
                                     .frame(width: 300, height: 40)
                             )
                         TextField("Username", text: $username)
@@ -44,7 +44,7 @@ Contador\nEm busca de perder uns quilinhos
                             .cornerRadius(8)
                             .overlay(
                                 RoundedRectangle(cornerRadius: 10)
-                                    .stroke(Color.iconcolor, lineWidth: 2)
+                                    .stroke(Color.verdeoliva, lineWidth: 2)
                                     .frame(width: 300, height: 40)
                             )
                         SecureField("Senha", text: $senha)
@@ -55,7 +55,7 @@ Contador\nEm busca de perder uns quilinhos
                             .cornerRadius(8)
                             .overlay(
                                 RoundedRectangle(cornerRadius: 10)
-                                    .stroke(Color.iconcolor, lineWidth: 2)
+                                    .stroke(Color.verdeoliva, lineWidth: 2)
                                     .frame(width: 300, height: 40)
                             )
                         TextField("Bio", text: $bio, axis: .vertical)
@@ -77,7 +77,7 @@ Contador\nEm busca de perder uns quilinhos
             {
                             Text("Salvar Alterações")
                                 .font(.system(size: 18, weight: .bold, design: .rounded))
-                                .foregroundColor(.iconcolor)
+                                .foregroundColor(.verdeoliva)
                                 .frame(maxWidth: .infinity)
                                 .padding()
                                 .background(Color.tabcolor)

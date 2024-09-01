@@ -15,7 +15,7 @@ struct Post: View {
             VStack(alignment: .leading, spacing: 10) {
                 Text(postTitle)
                     .font(.headline)
-                    .foregroundColor(.iconcolor)
+                    .foregroundColor(.verdeoliva)
                 Text(postContent)
                     .font(.body)
                     .foregroundColor(.black)
