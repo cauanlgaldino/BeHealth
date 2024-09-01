@@ -7,9 +7,9 @@
 
 import Foundation
 
-class APIService{
+class APIService {
     static let shared = APIService()
-    enum APIError: Error{
+    enum APIError: Error {
         case error
     }
     func login(credentials: Credentials,

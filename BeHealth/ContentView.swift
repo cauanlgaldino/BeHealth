@@ -6,8 +6,21 @@
 //
 
 import SwiftUI
+
 struct ContentView: View {
+    @State var showSplash: Bool = false
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        NavigationView {
+            TabView {
+                FeedView()
+                    .tabItem {
+                        Label("Inicio", systemImage: "house.fill")
+                    }
+            }
+            .tint(.verdeoliva)
+        }
     }
+}
+#Preview {
+    ContentView()
 }

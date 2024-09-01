@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct perfilView: View {
+struct PerfilView: View {
     var body: some View {
         ZStack {
             Color.backgroundcolor
