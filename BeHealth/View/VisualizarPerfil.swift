@@ -72,10 +72,9 @@ struct VisualizarPerfil: View {
                             }
                         }
                         .padding(.top, 20)
-                        Button(action: {
+                        Button {
                             isFollowing.toggle()
-                        }) 
-                        {
+                        } label: {
                             Text(isFollowing ? "Seguindo" : "Seguir")
                                 .font(.system(size: 16, weight: .bold, design: .rounded))
                                 .foregroundColor(isFollowing ? .tabcolor : .iconcolor)
@@ -107,7 +106,6 @@ struct VisualizarPerfil: View {
         }
     }
 }
-
 
 #Preview {
     VisualizarPerfil()

@@ -19,30 +19,7 @@ struct FeedView: View {
                 PostView()
             }
         }
-        .toolbar {
-            Button {
-                Task {
-                    await viewModel.logoutUser()
-                }
-                router.navigateToRoot()
-            } label: {
-                Text("Logout")
-            }
-            Button {
-                Task {
-                    await viewModel.logoutUser()
-                }
-                router.navigate(to: .searchView)
-            } label: {
-                Image(systemName: "magnifyingglass")
-            }
-        }
         .padding(16)
-        .navigationTitle("Feed")
-        .navigationBarTitleDisplayMode(.large)
-        .navigationBarBackButtonHidden(true)
-
-
     }
 }
 

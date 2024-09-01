@@ -20,6 +20,12 @@ enum LoginError: Error {
     case networkError(Error)
 }
 
+enum CreateLoginError: Error {
+    case userExists
+    case keychainError
+    case networkError(Error)
+}
+
 struct UserService {
     func getUsers(on baseURL: URL) async throws -> [User]? {
         let url = baseURL.appending(path: "users")

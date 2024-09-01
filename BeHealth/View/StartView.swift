@@ -18,7 +18,7 @@ struct StartView: View {
                 .scaledToFill()
             VStack {
                 Button {
-                    router.navigate(to: .login)
+                    router.navigate(to: .createUserView)
                 } label: {
                     Text("Criar Usuario").bold()
                         .frame(width: 300, height: 50, alignment: .center)
@@ -28,7 +28,7 @@ struct StartView: View {
                 }
                 .padding()
                 Button {
-                    router.navigate(to: .login)
+                    router.navigate(to: .loginView)
                 } label: {
                     Text("Login").bold()
                         .frame(width: 300, height: 50, alignment: .center)

@@ -113,12 +113,11 @@ private extension LoginView {
         Task {
             // MARK: Colocar chamada de função
             let result = await viewModel.loginUser(username: username, password: password)
-            
             switch result {
             case .success(let success):
                 if success {
                     isLoginSuccessful = true
-                    router.navigate(to: .feed)
+                    router.navigate(to: .contentView)
                     // Se o login for sucesso, mude o estado para navegar
                 } else {
                     alertMessage = "Erro inesperado ao fazer login"

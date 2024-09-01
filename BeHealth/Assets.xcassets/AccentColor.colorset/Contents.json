@@ -2,11 +2,7 @@
   "colors" : [
     {
       "color" : {
-<<<<<<< HEAD
         "color-space" : "srgb",
-=======
-        "color-space" : "extended-linear-srgb",
->>>>>>> feature_integracao_backend
         "components" : {
           "alpha" : "1.000",
           "blue" : "0x0D",

@@ -1,9 +1,5 @@
 {
-<<<<<<< HEAD
-  "originHash" : "cbd404ca0c2ea93618e9c88c247b46a2a9af7c9147f6901061215b87bad89702",
-=======
   "originHash" : "7a2c9b4bb42c2221bb642dfc27b6e8a478d63cd04f52d3e2819330e24f9fb63f",
->>>>>>> feature_integracao_backend
   "pins" : [
     {
       "identity" : "collectionconcurrencykit",

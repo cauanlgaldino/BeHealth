@@ -17,9 +17,9 @@ struct BeHealthApp: App {
                 StartView()
                     .navigationDestination(for: Router.Destination.self) { destination in
                         switch destination {
-                        case .feed:
+                        case .feedView:
                             FeedView()
-                        case .login:
+                        case .loginView:
                             LoginView()
                         case .settings:
                             ConfigPage()
@@ -27,6 +27,8 @@ struct BeHealthApp: App {
                             ContentView()
                         case .searchView:
                             SearchView()
+                        case .createUserView:
+                            CreateUser()
                         }
                     }
             }

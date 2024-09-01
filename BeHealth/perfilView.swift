@@ -74,7 +74,7 @@ struct PerfilView: View {
                     .padding(.top, 20)
                     HStack(spacing: 20.0) {
                             ForEach(0..<3) { index in
-                            postMV(postTitle: "Post \(index + 1)", 
+                            postMV(postTitle: "Post \(index + 1)",
                                    postContent: "Este é o conteúdo do post número \(index + 1).")
                             }
                         }

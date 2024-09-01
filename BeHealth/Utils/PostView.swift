@@ -84,7 +84,6 @@ struct PostView: View {
     }
 }
 
-
 struct CommentView: View {
     var body: some View {
         NavigationStack {
