@@ -52,41 +52,59 @@ struct LoginView: View {
 
 private extension LoginView {
     var usernameTextField: some View {
-        TextField("Insira seu username", text: $username)
-            .padding(12)
-            .autocapitalization(.none)
-            .disableAutocorrection(true)
-            .foregroundColor(.verdeoliva)
-            .textContentType(.username)
-            .textFieldStyle(.plain)
-            .focused($usernameFocused)
-            .submitLabel(.next)
-            .onSubmit {
-                passwordFocused = true
+        VStack(alignment: .leading, spacing: 4) {
+            HStack{
+                Image(systemName:"person")
+                    .font(.system(size: 24))
+                Text("Nome de Usuário")
             }
-            .overlay(
-                RoundedRectangle(cornerRadius: 10)
-                    .stroke(Color.verdeoliva, lineWidth: 2)
-            )
+                .font(.headline)
+                .foregroundColor(.iconcolor)
+            TextField("Insira seu username", text: $username)
+                .padding(12)
+                .autocapitalization(.none)
+                .disableAutocorrection(true)
+                .foregroundColor(.verdeoliva)
+                .textContentType(.username)
+                .textFieldStyle(.plain)
+                .focused($usernameFocused)
+                .submitLabel(.next)
+                .onSubmit {
+                    passwordFocused = true
+                }
+                .overlay(
+                    RoundedRectangle(cornerRadius: 10)
+                        .stroke(Color.verdeoliva, lineWidth: 2)
+                )
+        }
     }
     var passwordTextField: some View {
-        SecureField("Insira sua senha", text: $password)
-            .padding(12)
-            .autocapitalization(.none)
-            .disableAutocorrection(true)
-            .foregroundColor(.verdeoliva)
-            .textContentType(.password)
-            .focused($passwordFocused)
-            .submitLabel(.go)
-            .onSubmit {
-                submit()
+        VStack(alignment: .leading, spacing: 4) {
+            HStack {
+                Image(systemName:"lock")
+                    .font(.system(size: 24))
+                Text("Senha")
             }
-            .background(Color.white)
-            .cornerRadius(8)
-            .overlay(
-                RoundedRectangle(cornerRadius: 10)
-                    .stroke(Color.verdeoliva, lineWidth: 2)
-            )
+                .font(.headline)
+                .foregroundColor(.iconcolor)
+            SecureField("Insira sua senha", text: $password)
+                .padding(12)
+                .autocapitalization(.none)
+                .disableAutocorrection(true)
+                .foregroundColor(.verdeoliva)
+                .textContentType(.password)
+                .focused($passwordFocused)
+                .submitLabel(.go)
+                .onSubmit {
+                    submit()
+                }
+                .background(Color.white)
+                .cornerRadius(8)
+                .overlay(
+                    RoundedRectangle(cornerRadius: 10)
+                        .stroke(Color.verdeoliva, lineWidth: 2)
+                )
+        }
     }
     var loginButton: some View {
         Button {
