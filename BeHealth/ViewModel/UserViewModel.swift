@@ -35,12 +35,14 @@ class UserViewModel: ObservableObject {
             print("Erro ao buscar seguidores")
         }
     }
-    func fetchMe(on baseURL: URL, session: String) async {
+    func fetchMe(session: String) async -> Bool {
         do {
             let fetchedMe = try await userService.me(on: baseURL, with: session)
             username = fetchedMe.username
+            return true
         } catch {
             print("Erro ao recuperar usuário autenticado")
+            return false
         }
     }
     func createFollow(follower: User) async {
@@ -72,7 +74,7 @@ class UserViewModel: ObservableObject {
             let data = session.data(using: .utf8)!
             if keychain.storeData(data: data, forService: service, account: username) {
                 Task {
-                    await fetchMe(on: baseURL, session: session)
+                    await fetchMe(session: session)
                 }
                 return .success(true)
             } else {
@@ -102,7 +104,7 @@ class UserViewModel: ObservableObject {
             _ = keychain.deleteData(forService: service, account: username)
             if keychain.storeData(data: data, forService: service, account: username) {
                 Task {
-                    await fetchMe(on: baseURL, session: session)
+                    await fetchMe(session: session)
                 }
                 return .success(true)
             } else {
