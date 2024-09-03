@@ -14,7 +14,7 @@ class UserViewModel: ObservableObject {
     @Published var users: [User] = []
     @Published var follows: [Follow] = []
     @Published var user: User?
-    let baseURL = URL(string: "http://maionese.local:8080")!
+    let baseURL = URL(string: "http://behealth.local:8080")!
 
     private let userService = UserService()
     private let followService = FollowService()

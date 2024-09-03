@@ -29,7 +29,7 @@ enum Crop: Equatable {
         case .circle:
             return .init(width: 300, height: 300)
         case .rectangle:
-            return .init(width: 300, height: 500)
+            return .init(width: 320, height: 400)
         case .square:
             return.init(width: 300, height: 300)
         case .custom(let cGSize):

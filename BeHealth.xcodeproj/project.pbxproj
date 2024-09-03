@@ -38,6 +38,7 @@
 		E7C9D1372C84C22300BCF6DE /* HomeCropView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7C9D1362C84C22300BCF6DE /* HomeCropView.swift */; };
 		E7C9D13A2C84C50900BCF6DE /* CustomImagePickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7C9D1392C84C50900BCF6DE /* CustomImagePickerView.swift */; };
 		E7C9D13C2C8533E800BCF6DE /* TabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7C9D13B2C8533E800BCF6DE /* TabView.swift */; };
+		E7FC2DB12C872F1A0077B030 /* EditPostView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7FC2DB02C872F1A0077B030 /* EditPostView.swift */; };
 		E902F89E2C83772B003C0384 /* VisualizarPerfil.swift in Sources */ = {isa = PBXBuildFile; fileRef = E902F89D2C83772B003C0384 /* VisualizarPerfil.swift */; };
 		E9EB9F5A2C7DF01100D57A65 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9EB9F592C7DF01100D57A65 /* LoginView.swift */; };
 		E9EB9F5F2C7DF94B00D57A65 /* StartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9EB9F5E2C7DF94B00D57A65 /* StartView.swift */; };
@@ -99,6 +100,7 @@
 		E7C9D1362C84C22300BCF6DE /* HomeCropView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCropView.swift; sourceTree = "<group>"; };
 		E7C9D1392C84C50900BCF6DE /* CustomImagePickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomImagePickerView.swift; sourceTree = "<group>"; };
 		E7C9D13B2C8533E800BCF6DE /* TabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabView.swift; sourceTree = "<group>"; };
+		E7FC2DB02C872F1A0077B030 /* EditPostView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditPostView.swift; sourceTree = "<group>"; };
 		E902F89D2C83772B003C0384 /* VisualizarPerfil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisualizarPerfil.swift; sourceTree = "<group>"; };
 		E9EB9F592C7DF01100D57A65 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		E9EB9F5E2C7DF94B00D57A65 /* StartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartView.swift; sourceTree = "<group>"; };
@@ -273,6 +275,7 @@
 				E7C9D1322C84999300BCF6DE /* BeHealthCameraView.swift */,
 				E7C9D1362C84C22300BCF6DE /* HomeCropView.swift */,
 				E7C9D1392C84C50900BCF6DE /* CustomImagePickerView.swift */,
+				E7FC2DB02C872F1A0077B030 /* EditPostView.swift */,
 			);
 			path = "Camera & Gallery";
 			sourceTree = "<group>";
@@ -460,6 +463,7 @@
 				774DCA932C83944100FB82FF /* UserViewModel.swift in Sources */,
 				E9EB9F5F2C7DF94B00D57A65 /* StartView.swift in Sources */,
 				E7C9D1312C84939300BCF6DE /* LiveCameraView.swift in Sources */,
+				E7FC2DB12C872F1A0077B030 /* EditPostView.swift in Sources */,
 				E7C9D13A2C84C50900BCF6DE /* CustomImagePickerView.swift in Sources */,
 				E9EB9F5F2C7DF94B00D57A65 /* StartView.swift in Sources */,
 				E77824D42C78D6BC00B55618 /* BeHealthApp.swift in Sources */,
@@ -634,7 +638,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"BeHealth/Preview Content\"";
-				DEVELOPMENT_TEAM = W8HS7RX76D;
+				DEVELOPMENT_TEAM = 762S62F9X8;
 				ENABLE_PREVIEWS = YES;
 				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -666,7 +670,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"BeHealth/Preview Content\"";
-				DEVELOPMENT_TEAM = W8HS7RX76D;
+				DEVELOPMENT_TEAM = 762S62F9X8;
 				ENABLE_PREVIEWS = YES;
 				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;

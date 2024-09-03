@@ -51,7 +51,9 @@ private struct CustomImagePickerView<Content: View>: View {
                             await MainActor.run {
                                 selectedImage = image
 //                                showDialog.toggle()
-                                showCropView.toggle()
+                                if let selectedImage {
+                                    showCropView.toggle()
+                                }
                             }
                         }
                     }
@@ -68,7 +70,7 @@ private struct CustomImagePickerView<Content: View>: View {
             .fullScreenCover(isPresented: $showCropView) {
                 selectedImage = nil
             } content: {
-                CropView(crop: selectedCropType, image: selectedImage) { croppedImage, status in
+                CropView(crop: selectedCropType, image: selectedImage) { croppedImage, _ in
                     if let croppedImage {
                         self.croppedImage = croppedImage
                     }
@@ -218,16 +220,16 @@ struct CropView: View {
             HStack {
                 ForEach(1...5, id: \.self) { _ in
                     Rectangle()
-                        .fill(.white.opacity(0.7))
-                        .frame(width: 1)
+                        .fill(.white.opacity(0.5))
+                        .frame(width: 0.8)
                         .frame(maxWidth: .infinity)
                 }
             }
             VStack {
                 ForEach(1...5, id: \.self) { _ in
                     Rectangle()
-                        .fill(.white.opacity(0.7))
-                        .frame(height: 1)
+                        .fill(.white.opacity(0.5))
+                        .frame(height: 0.8)
                         .frame(maxHeight: .infinity)
                 }
             }
