@@ -41,8 +41,6 @@ struct FeedView: View {
         .navigationTitle("Feed")
         .navigationBarTitleDisplayMode(.large)
         .navigationBarBackButtonHidden(true)
-
-
     }
 }
 

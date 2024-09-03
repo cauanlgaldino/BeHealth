@@ -8,13 +8,11 @@
 import SwiftUI
 
 struct HomeCropView: View {
-    
     @State private var showPicker: Bool = false
     @State private var croppedImage: UIImage?
-    
     var body: some View {
         NavigationStack {
-            VStack{
+            VStack {
                 if let croppedImage {
                     Image(uiImage: croppedImage)
                         .resizable()
@@ -29,7 +27,7 @@ struct HomeCropView: View {
             .navigationTitle("Seleção para corte")
             .navigationBarTitleDisplayMode(.inline)
             .toolbar {
-                ToolbarItem (placement: .topBarTrailing) {
+                ToolbarItem(placement: .topBarTrailing) {
                     Button {
                         showPicker.toggle()
                     } label: {
@@ -39,6 +37,7 @@ struct HomeCropView: View {
                     .tint(.black)
                 }
             }
+            .cropImagePicker(mode: .square, show: $showPicker, croppedImage: $croppedImage)
         }
     }
 }

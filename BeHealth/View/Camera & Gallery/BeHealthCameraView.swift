@@ -34,8 +34,11 @@ struct BeHealthCameraView: View {
                 })
                 .padding(.bottom)
                 .sheet(isPresented: $isCustomCameraViewPresented, content: {
-                    CustomCameraView(capturedImage: $capturedImage)
+                    LiveCameraView(capturedImage: $capturedImage)
+                        .ignoresSafeArea()
+                        .presentationDetents([.large])
                 })
+                
             }
         }
     }

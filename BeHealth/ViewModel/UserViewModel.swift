@@ -13,6 +13,7 @@ class UserViewModel: ObservableObject {
     @AppStorage("username") var username: String?
     @Published var users: [User] = []
     @Published var follows: [Follow] = []
+    @Published var user: User?
     let baseURL = URL(string: "http://maionese.local:8080")!
 
     private let userService = UserService()
@@ -39,6 +40,7 @@ class UserViewModel: ObservableObject {
         do {
             let fetchedMe = try await userService.me(on: baseURL, with: session)
             username = fetchedMe.username
+            user = fetchedMe
         } catch {
             print("Erro ao recuperar usuário autenticado")
         }
@@ -127,6 +129,18 @@ class UserViewModel: ObservableObject {
             _ = try await userService.updateBio(on: baseURL, token: token, bio: bio)
         } catch {
             print("Erro ao atualizar BIO")
+        }
+    }
+    func sendAvatar(avatarImage: UIImage) async {
+        do {
+            if let retrievedData = keychain.readData(forService: service, account: username!) {
+                let session = String(data: retrievedData, encoding: .utf8)
+                try await userService.updateAvatar(image: avatarImage, on: baseURL, with: session!)
+                print("Avatar atualizado com sucesso.")
+            }
+            
+        } catch {
+            print("Erro ao atualizar avatar: \(error.localizedDescription)")
         }
     }
 }

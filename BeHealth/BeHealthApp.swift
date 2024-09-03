@@ -13,24 +13,25 @@ struct BeHealthApp: App {
 
     var body: some Scene {
         WindowGroup {
-            NavigationStack(path: $router.navPath) {
-                Start()
-                    .navigationDestination(for: Router.Destination.self) { destination in
-                        switch destination {
-                        case .feed:
-                            FeedView()
-                        case .login:
-                            LoginView()
-                        case .settings:
-                            ConfigPage()
-                        case .contentView:
-                            ContentView()
-                        case .searchView:
-                            SearchView()
-                        }
-                    }
-            }
-            .environmentObject(router)
+            TavView()
+//            NavigationStack(path: $router.navPath) {
+//                Start()
+//                    .navigationDestination(for: Router.Destination.self) { destination in
+//                        switch destination {
+//                        case .feed:
+//                            FeedView()
+//                        case .login:
+//                            LoginView()
+//                        case .settings:
+//                            ConfigPage()
+//                        case .contentView:
+//                            ContentView()
+//                        case .searchView:
+//                            SearchView()
+//                        }
+//                    }
+//            }
+//            .environmentObject(router)
         }
     }
 }
