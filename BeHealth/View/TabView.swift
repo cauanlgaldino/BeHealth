@@ -8,18 +8,14 @@
 import Foundation
 import SwiftUI
 
-enum Tabs1: String {
-    case feed
-    case cameraView
-    case home
-}
 
 struct TavView: View {
     @State var isPresenting = false
-    @State var selectedItem = 1
+    @State var selectedItem: Int = 1
     @State var capturedImage: UIImage?
-    @State var oldSelectedItem = 1
-    
+    @State var oldSelectedItem: Int = 1
+    @EnvironmentObject var router: Router
+    @StateObject private var viewModel = UserViewModel()
     var body: some View {
         TabView(selection: $selectedItem) {
             FeedView()
@@ -31,17 +27,13 @@ struct TavView: View {
                 .tabItem {
                     Label("Camera", systemImage: "camera.fill")
                 }.tag(2)
-//            PerfilPage()
-////            HomeCropView()
-//                .tabItem {
-//                    Label("Foto de Perfil", systemImage: "person.circle")
-//                }
-//                .tag(3)
-//            LoginView()
-//                .tabItem {
-//                    Label("Login", systemImage: "lock")
-//                }
+            PerfilPage()
+                .tabItem {
+                    Label("Foto de Perfil", systemImage: "person.circle")
+                }
+                .tag(3)
         }
+        .tint(.verdeoliva)
         .onChange(of: selectedItem) {    // SwiftUI 2.0 track changes
                 if 2 == selectedItem {
                 self.isPresenting = true
