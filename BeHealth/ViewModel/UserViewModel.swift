@@ -36,13 +36,15 @@ class UserViewModel: ObservableObject {
             print("Erro ao buscar seguidores")
         }
     }
-    func fetchMe(on baseURL: URL, session: String) async {
+    func fetchMe(session: String) async -> Bool {
         do {
             let fetchedMe = try await userService.me(on: baseURL, with: session)
             username = fetchedMe.username
             user = fetchedMe
+            return true
         } catch {
             print("Erro ao recuperar usuário autenticado")
+            return false
         }
     }
     func createFollow(follower: User) async {
@@ -64,18 +66,24 @@ class UserViewModel: ObservableObject {
             print("Erro ao adicionar seguidor")
         }
     }
-    func createUsers(username: String, name: String, password: String) async {
+    func createUsers(username: String, name: String, password: String) async -> Result<Bool, CreateLoginError> {
+        let userExists = await checkUserExistence(username: username)
+        guard !userExists else {
+            return .failure(.userExists)
+        }
         do {
             let session = try await userService.createUser(on: baseURL, username: username, name: name, password: password)
             let data = session.data(using: .utf8)!
             if keychain.storeData(data: data, forService: service, account: username) {
-                print("Token salvo no Keychain")
+                Task {
+                    await fetchMe(session: session)
+                }
+                return .success(true)
             } else {
-                print("Falha ao salvar token no Keychain")
+                return .failure(.keychainError)
             }
-            print(session)
         } catch {
-            print("Erro ao criar usuário!")
+            return .failure(.networkError(error))
         }
     }
     func checkUserExistence(username: String) async -> Bool {
@@ -98,7 +106,7 @@ class UserViewModel: ObservableObject {
             _ = keychain.deleteData(forService: service, account: username)
             if keychain.storeData(data: data, forService: service, account: username) {
                 Task {
-                    await fetchMe(on: baseURL, session: session)
+                    await fetchMe(session: session)
                 }
                 return .success(true)
             } else {
@@ -117,7 +125,7 @@ class UserViewModel: ObservableObject {
                 return false
             }
             try await userService.logout(on: baseURL, with: session)
-            _ = keychain.deleteData(forService: service, account: username!)
+//            _ = keychain.deleteData(forService: service, account: username!)
         } catch {
             print("Erro ao fazer logout")
             return false

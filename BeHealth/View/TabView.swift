@@ -8,13 +8,13 @@
 import Foundation
 import SwiftUI
 
-enum Tabs: String {
+enum Tabs1: String {
     case feed
     case cameraView
     case home
 }
 
-struct TavView : View {
+struct TavView: View {
     @State var isPresenting = false
     @State var selectedItem = 1
     @State var capturedImage: UIImage?
@@ -31,16 +31,16 @@ struct TavView : View {
                 .tabItem {
                     Label("Camera", systemImage: "camera.fill")
                 }.tag(2)
-            PerfilPage()
-//            HomeCropView()
-                .tabItem {
-                    Label("Foto de Perfil", systemImage: "person.circle")
-                }
-                .tag(3)
-            LoginView()
-                .tabItem {
-                    Label("Login", systemImage: "lock")
-                }
+//            PerfilPage()
+////            HomeCropView()
+//                .tabItem {
+//                    Label("Foto de Perfil", systemImage: "person.circle")
+//                }
+//                .tag(3)
+//            LoginView()
+//                .tabItem {
+//                    Label("Login", systemImage: "lock")
+//                }
         }
         .onChange(of: selectedItem) {    // SwiftUI 2.0 track changes
                 if 2 == selectedItem {

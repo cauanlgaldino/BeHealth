@@ -10,11 +10,12 @@ import SwiftUI
 
 final class Router: ObservableObject {
     public enum Destination: Codable, Hashable {
-        case login
-        case feed
+        case loginView
+        case feedView
         case settings
         case contentView
         case searchView
+        case createUserView
     }
     @Published var navPath = NavigationPath()
     func navigate(to destination: Destination) {

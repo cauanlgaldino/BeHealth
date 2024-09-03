@@ -62,19 +62,17 @@ Contador\nEm busca de perder uns quilinhos
                             .textFieldStyle(RoundedBorderTextFieldStyle())
                             .background(Color.white)
                             .lineLimit(3...5)
-                            .frame(width: 300)       
+                            .frame(width: 300)
                     }
                     .listRowBackground(Color.backgroundcolor)
                     .listRowSeparator(.hidden)
                     Section {
-                        Button(action: {
+                        Button{
                             print("Dados atualizados:")
                             print("Nome: \(nome)")
                             print("Username: \(username)")
                             print("Bio: \(bio)")
-                        }
-                    )
-            {
+                        } label: {
                             Text("Salvar Alterações")
                                 .font(.system(size: 18, weight: .bold, design: .rounded))
                                 .foregroundColor(.verdeoliva)
@@ -83,11 +81,9 @@ Contador\nEm busca de perder uns quilinhos
                                 .background(Color.tabcolor)
                                 .cornerRadius(10)
                         }
-                        Button(action: {
+                        Button {
                             print("Usuário deslogado")
-                        }
-                    )
-            {
+                        } label: {
                             Text("Logout")
                                 .font(.system(size: 18, weight: .bold, design: .rounded))
                                 .foregroundColor(.white)

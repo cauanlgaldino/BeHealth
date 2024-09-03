@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct Start: View {
+struct StartView: View {
     @EnvironmentObject var router: Router
     var body: some View {
         ZStack {
@@ -18,7 +18,7 @@ struct Start: View {
                 .scaledToFill()
             VStack {
                 Button {
-                    router.navigate(to: .login)
+                    router.navigate(to: .createUserView)
                 } label: {
                     Text("Criar Usuario").bold()
                         .frame(width: 300, height: 50, alignment: .center)
@@ -28,7 +28,7 @@ struct Start: View {
                 }
                 .padding()
                 Button {
-                    router.navigate(to: .login)
+                    router.navigate(to: .loginView)
                 } label: {
                     Text("Login").bold()
                         .frame(width: 300, height: 50, alignment: .center)
@@ -41,5 +41,6 @@ struct Start: View {
     }
 }
 #Preview {
-    Start()
+    StartView()
+        .environmentObject(Router())
 }
