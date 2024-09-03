@@ -18,38 +18,12 @@ struct ContentView: View {
     @StateObject private var viewModel = UserViewModel()
     var body: some View {
         TabView(selection: $selectedTab) {
-                FeedView()
+            FeedView()
                 .tabItem {
                     Label("Inicio", systemImage: "house.fill")
                 }
-        }
-        .toolbar {
-            switch selectedTab {
-            case .feed:
-                Button {
-                    Task {
-                        await viewModel.logoutUser()
-                    }
-                    router.navigateToRoot()
-                } label: {
-                    Text("Logout")
-                }
-                Button {
-                    Task {
-                        await viewModel.logoutUser()
-                    }
-                    router.navigate(to: .searchView)
-                } label: {
-                    Image(systemName: "magnifyingglass")
-                }
-            }
+                .tag(Tabs.feed)
         }
         .tint(.verdeoliva)
-        .navigationTitle(selectedTab.rawValue.capitalized)
-        .navigationBarTitleDisplayMode(.large)
-        .navigationBarBackButtonHidden(true)
     }
-}
-#Preview {
-    ContentView()
 }

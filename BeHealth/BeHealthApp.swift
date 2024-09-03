@@ -34,7 +34,7 @@ struct BeHealthApp: App {
                                 case .settings:
                                     ConfigPage()
                                 case .contentView:
-                                    ContentView()
+                                    TavView()
                                 case .searchView:
                                     SearchView()
                                 case .createUserView:

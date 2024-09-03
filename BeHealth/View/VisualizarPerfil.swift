@@ -8,7 +8,6 @@
 import SwiftUI
 
 struct VisualizarPerfil: View {
-    
     @State private var isFollowing = false
     var body: some View {
         NavigationStack {
