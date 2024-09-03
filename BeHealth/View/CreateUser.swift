@@ -20,6 +20,7 @@ struct CreateUser: View {
     @State private var mensagemusuarioinvalido = false
     @State private var showAlert = false
     @State var isCreated: Bool = false
+    @Binding var isAuthenticated: Bool
     @EnvironmentObject var router: Router
     @StateObject private var viewModel = UserViewModel()
     private var criaruservalido: Bool {
@@ -149,8 +150,7 @@ struct CreateUser: View {
                         case .success(let success):
                             if success {
                                 isCreated = true
-                                router.navigate(to: .contentView)
-                                // Se o login for sucesso, mude o estado para navegar
+                                isAuthenticated = true
                             } else {
                                 alertMessage = "Erro inesperado ao criar usuário"
                                 showAlert = true
@@ -210,13 +210,13 @@ struct CreateUser: View {
     }
 }
 
-struct ContentView_Previews: PreviewProvider {
-    static var previews: some View {
-        CreateUser()
-            .preferredColorScheme(.light)
-    }
-}
-
-#Preview {
-    CreateUser()
-}
+//struct ContentView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        CreateUser()
+//            .preferredColorScheme(.light)
+//    }
+//}
+//
+//#Preview {
+//    CreateUser()
+//}

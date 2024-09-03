@@ -9,51 +9,58 @@ import SwiftUI
 
 struct FeedView: View {
     @State private var isLoggedOut: Bool = false
-    @StateObject private var viewModel = UserViewModel()
-    @EnvironmentObject var router: Router
+    @StateObject private var viewModel = PostViewModel()
+    @StateObject private var userVM = UserViewModel()
+    @AppStorage("username") var username: String?
+    let service = PostService()
     var body: some View {
-        TrackableScrollView(
-            header: {
-                HStack {
-                    Text("Feed")
-                        .font(.largeTitle)
-                        .fontWeight(.bold)
-                        .foregroundColor(.verdeoliva)
-                        .padding(.leading, 16)
-                    Spacer()
-                    Button {
-                        Task {
-                            await viewModel.logoutUser()
-                        }
-                        router.navigateToRoot()
-                    } label: {
-                        Text("Logout")
+        List {
+            ForEach(viewModel.posts, id: \.id) { post in
+                if let mediaString = post.media,
+                   let image = service.convertBase64StringToImage(imageBase64String: mediaString) {
+                    if let user = userVM.getUser(by: post.user_id) {
+                        PostView(name: user.name,
+                                 username: user.username,
+                                 image: image,
+                                 url: user.avatar != nil ? viewModel.baseURL.appendingPathComponent(user.avatar!) : nil)
+                    } else {
+                        Text("Usuário não encontrado")
                     }
-                    NavigationLink(destination: SearchView()){
-                        Image(systemName: "magnifyingglass")
-                            .resizable()
-                            .scaledToFit()
-                            .frame(width: 32, height: 32)
-                    }
-                    .padding(.trailing, 16)
                 }
-            },
-            content: {
-                VStack(spacing: 16) {
-                    PostView()
-                    PostView()
-                    PostView()
-                }
-                .padding(.trailing, 16)
-                .padding(.leading, 16)
             }
-        )
+        }
+        .refreshable {
+            Task {
+                await viewModel.fetchPosts()
+            }
+        }
+        .onAppear {
+            Task {
+                await userVM.fetchUsers()
+                await viewModel.fetchPosts()
+                await viewModel.createImagePost(account: username!)
+            }
+        }
+        .toolbar {
+            Button {
+                Task {
+                    await userVM.logoutUser()
+                }
+            } label: {
+                Text("Logout")
+            }
+            NavigationLink(destination: SearchView()) {
+                Image(systemName: "magnifyingglass")
+            }
+        }
+        .navigationTitle("Feed")
+        .navigationBarBackButtonHidden(true)
     }
 }
 
-#Preview {
-    FeedView()
-}
+//#Preview {
+//    FeedView()
+//}
 
 
 //import SwiftUI

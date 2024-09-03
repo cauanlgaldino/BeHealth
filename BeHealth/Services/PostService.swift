@@ -33,7 +33,7 @@ struct PostService {
     }
     
     func createPost(on baseURL: URL, token: String, text: String) async throws {
-        let url = baseURL.appendingPathComponent("/posts")
+        let url = baseURL.appendingPathComponent("posts")
         
         var request = URLRequest(url: url)
         request.httpMethod = "POST"
@@ -44,9 +44,11 @@ struct PostService {
         let (data, response) = try await URLSession.shared.data(for: request)
         try checkConection(data: data, response: response)
     }
-    func createImagePost(on baseURL: URL, with token: String) async throws  {
+    func createImagePost(on baseURL: URL, with token: String, user: User?) async throws  {
         let url = baseURL.appending(path: "posts")
-        let create = Post.Create(text: "Psyduck", media: convertImageToBase64String(img: UIImage(imageLiteralResourceName: "amarelo")))
+        let create = Post.Create(text: "psyduck",
+                                 media: convertImageToBase64String(img: UIImage(imageLiteralResourceName: "psyduck")),
+                                 user: user)
         var request = URLRequest(url: url)
         request.httpMethod = "POST"
         request.setValue("Bearer \(token)", forHTTPHeaderField: "Authorization")
