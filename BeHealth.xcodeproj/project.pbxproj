@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		368F86B72C7E008F00BDFF0B /* CriarUsuarioView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 368F86B62C7E008F00BDFF0B /* CriarUsuarioView.swift */; };
+		772803842C86BF62002E5D0F /* AvatarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 772803832C86BF62002E5D0F /* AvatarView.swift */; };
 		773EFFC22C85F75F0081F3BB /* PostViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 773EFFC12C85F75F0081F3BB /* PostViewModel.swift */; };
 		773EFFC42C85F7840081F3BB /* PostService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 773EFFC32C85F7840081F3BB /* PostService.swift */; };
 		773EFFC62C85F7A00081F3BB /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 773EFFC52C85F7A00081F3BB /* Post.swift */; };
@@ -67,6 +68,7 @@
 
 /* Begin PBXFileReference section */
 		368F86B62C7E008F00BDFF0B /* CriarUsuarioView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CriarUsuarioView.swift; sourceTree = "<group>"; };
+		772803832C86BF62002E5D0F /* AvatarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvatarView.swift; sourceTree = "<group>"; };
 		773EFFC12C85F75F0081F3BB /* PostViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostViewModel.swift; sourceTree = "<group>"; };
 		773EFFC32C85F7840081F3BB /* PostService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostService.swift; sourceTree = "<group>"; };
 		773EFFC52C85F7A00081F3BB /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
@@ -201,6 +203,7 @@
 			children = (
 				77D7F5C12C81F60A00AAA227 /* PostView.swift */,
 				E9EB9F6F2C7F4FC900D57A65 /* PostMockup.swift */,
+				772803832C86BF62002E5D0F /* AvatarView.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -460,6 +463,7 @@
 				774DCA912C8393FD00FB82FF /* User.swift in Sources */,
 				773EFFC22C85F75F0081F3BB /* PostViewModel.swift in Sources */,
 				774DCA952C83946C00FB82FF /* KeychainManager.swift in Sources */,
+				772803842C86BF62002E5D0F /* AvatarView.swift in Sources */,
 				774DCA932C83944100FB82FF /* UserViewModel.swift in Sources */,
 				E9EB9F5F2C7DF94B00D57A65 /* StartView.swift in Sources */,
 				E7C9D1312C84939300BCF6DE /* LiveCameraView.swift in Sources */,

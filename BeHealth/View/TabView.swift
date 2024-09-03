@@ -52,7 +52,9 @@ struct TavView: View {
 
     var body: some View {
         TabView(selection: $selectedItem) {
-            FeedView()
+            NavigationStack {
+                FeedView()
+            }
                 .tabItem {
                     Label("Feed", systemImage: "house.fill")
                 }.tag(1)

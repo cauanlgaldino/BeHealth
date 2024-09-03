@@ -4,6 +4,8 @@
 //
 //  Created by honorio on 22/08/24.
 //
+// swiftlint:disable all
+
 
 import Foundation
 import SwiftUI
@@ -20,6 +22,9 @@ class UserViewModel: ObservableObject {
     private let followService = FollowService()
     private let keychain = KeychainManager()
     private let service = "com.login.app"
+    func getUser(by user_id: UUID) -> User? {
+        return users.first { $0.id == user_id }
+    }
     func fetchUsers() async {
         do {
             let fetchedUsers = try await userService.getUsers(on: baseURL)

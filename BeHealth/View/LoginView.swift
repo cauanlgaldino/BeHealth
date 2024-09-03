@@ -13,7 +13,7 @@ struct LoginView: View {
     @State private var alertMessage = ""
     @State private var showAlert = false
     @State var isLoginSuccessful: Bool = false
-    @EnvironmentObject var router: Router
+    @Binding var isAuthenticated: Bool
     @FocusState private var usernameFocused: Bool
     @FocusState private var passwordFocused: Bool
     @StateObject private var viewModel = UserViewModel()
@@ -135,9 +135,7 @@ private extension LoginView {
             case .success(let success):
                 if success {
                     isLoginSuccessful = true
-//                    router.navigate(to: .feed)
-                    router.navigate(to: .contentView)
-                    // Se o login for sucesso, mude o estado para navegar
+                    isAuthenticated = true
                 } else {
                     alertMessage = "Erro inesperado ao fazer login"
                     showAlert = true
@@ -168,6 +166,6 @@ extension View {
         UIApplication.shared.sendAction(#selector(UIResponder.resignFirstResponder), to: nil, from: nil, for: nil)
     }
 }
-#Preview {
-    LoginView()
-}
+//#Preview {
+//    LoginView()
+//}

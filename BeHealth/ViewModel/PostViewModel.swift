@@ -4,16 +4,20 @@
 //
 //  Created by honorio on 26/08/24.
 //
+// swiftlint:disable all
+
 
 import Foundation
 import PhotosUI
 import _PhotosUI_SwiftUI
+import SwiftUI
 
 @MainActor
 class PostViewModel: ObservableObject {
     @Published var posts: [Post] = []
     @Published var images = [UIImage]()
     @Published var selectedPhotos = [PhotosPickerItem]()
+    var viewModel = UserViewModel()
     let baseURL = URL(string: "http://maionese.local:8080")!
     private let postService = PostService()
     private let userService = UserService()
@@ -44,12 +48,12 @@ class PostViewModel: ObservableObject {
         }
     }
     
-    func createImagePost() async {
+    func createImagePost(account: String) async {
         do {
-            guard let retrievedData = keychain.readData(forService: service, account: "cauan"), let session = String(data: retrievedData, encoding: .utf8) else {
+            guard let retrievedData = keychain.readData(forService: service, account: account), let session = String(data: retrievedData, encoding: .utf8) else {
                 return print("Erro ao recuperar token")
             }
-            try await postService.createImagePost(on: baseURL, with: session)
+            try await postService.createImagePost(on: baseURL, with: session, user: viewModel.user)
         } catch {
             print("Erro")
         }

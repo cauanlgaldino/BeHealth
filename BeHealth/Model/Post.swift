@@ -4,6 +4,7 @@
 //
 //  Created by honorio on 26/08/24.
 //
+// swiftlint:disable all
 
 import Foundation
 
@@ -12,16 +13,17 @@ struct Post: Codable {
     var text: String
     var media: String?
     var tag: String?
-    var userId: UUID
+    var user_id: UUID
     var user: User?
-    var likeCount: Int
-    var createdAt: String
-    var updatedAt: String
+    var like_count: Int
+    var created_at: String
+    var updated_at: String
 }
 
 extension Post {
     struct Create: Encodable {
         var text: String
         var media: String?
+        var user: User?
     }
 }

@@ -8,39 +8,38 @@
 import SwiftUI
 
 struct StartView: View {
-    @EnvironmentObject var router: Router
+    @Binding var isAuthenticated: Bool
+
     var body: some View {
-        ZStack {
-            Color.white
-                .ignoresSafeArea()
-            Image("initialscreen")
-                .resizable()
-                .scaledToFill()
-            VStack {
-                Button {
-                    router.navigate(to: .createUserView)
-                } label: {
-                    Text("Criar Usuario").bold()
-                        .frame(width: 300, height: 50, alignment: .center)
-                        .background(Color.tabcolor)
-                        .foregroundColor(.iconcolor)
-                        .cornerRadius(8)
-                }
-                .padding()
-                Button {
-                    router.navigate(to: .loginView)
-                } label: {
-                    Text("Login").bold()
-                        .frame(width: 300, height: 50, alignment: .center)
-                        .background(Color.iconcolor)
-                        .foregroundColor(.tabcolor)
-                        .cornerRadius(8)
+        NavigationStack {
+            ZStack {
+                Color.white
+                    .ignoresSafeArea()
+                Image("initialscreen")
+                    .resizable()
+                    .scaledToFill()
+                VStack {
+                    NavigationLink(destination: CreateUser(isAuthenticated: $isAuthenticated)) {
+                        Text("Criar Usuario").bold()
+                            .frame(width: 300, height: 50, alignment: .center)
+                            .background(Color.tabcolor)
+                            .foregroundColor(.iconcolor)
+                            .cornerRadius(8)
+                    }
+                    .padding()
+
+                    NavigationLink(destination: LoginView(isAuthenticated: $isAuthenticated)) {
+                        Text("Login").bold()
+                            .frame(width: 300, height: 50, alignment: .center)
+                            .background(Color.iconcolor)
+                            .foregroundColor(.tabcolor)
+                            .cornerRadius(8)
+                    }
                 }
             }
         }
     }
 }
-#Preview {
-    StartView()
-        .environmentObject(Router())
-}
+//#Preview {
+//    StartView()
+//}
