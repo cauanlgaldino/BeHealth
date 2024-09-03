@@ -90,7 +90,7 @@ struct VisualizarPerfil: View {
                         .padding(.top, 20)
                         HStack {
                             ForEach(0..<3) { index in
-                                Post(postTitle: "Post \(index + 1)",
+                                PostMockup(postTitle: "Post \(index + 1)",
                                      postContent: "Este é o conteúdo do post número \(index + 1).")
                             }
                         }

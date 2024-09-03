@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct Post: View {
+struct PostMockup: View {
         var postTitle: String
         var postContent: String
 
@@ -30,7 +30,7 @@ struct Post: View {
     }
 
 #Preview {
-    Post(
+    PostMockup(
     postTitle: "Título do Post", postContent:
         "Este é o conteúdo do post. Ele será exibido com uma linha de limite de texto para evitar sobreposição.")
 }

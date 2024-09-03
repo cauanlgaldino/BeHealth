@@ -9,7 +9,7 @@ import Foundation
 
 enum ServiceError: Error {
     case invalidURL
-    case invalidResponsecCase(code: Int, body: Data?)
+    case invalidResponseCase(code: Int, body: Data?)
     case decodingError
 }
 
@@ -55,7 +55,7 @@ struct UserService {
                 print("😸 Sucesso! \(response.statusCode)")
             default:
                 print("🙀 Erro \(response.statusCode)")
-                throw ServiceError.invalidResponsecCase(code: response.statusCode, body: data)
+                throw ServiceError.invalidResponseCase(code: response.statusCode, body: data)
             }
         }
     }

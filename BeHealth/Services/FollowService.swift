@@ -26,7 +26,7 @@ struct FollowService {
                 print("😸 Sucesso! \(response.statusCode)")
             default:
                 print("🙀 Erro \(response.statusCode)")
-                throw ServiceError.invalidResponsecCase(code: response.statusCode, body: data)
+                throw ServiceError.invalidResponseCase(code: response.statusCode, body: data)
             }
         }
     }
