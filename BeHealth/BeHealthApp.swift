@@ -22,7 +22,7 @@ struct BeHealthApp: App {
             NavigationStack(path: $router.navPath) {
                 if isAuthenticationChecked {
                     if isAuthenticated {
-                        ContentView()
+                        TavView()
                     } else {
                         StartView()
                             .navigationDestination(for: Router.Destination.self) { destination in

@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import UIKit
 
 enum ServiceError: Error {
     case invalidURL
@@ -105,6 +106,25 @@ struct UserService {
         request.setValue("application/json", forHTTPHeaderField: "Content-Type")
         let (data, response) = try await URLSession.shared.data(for: request)
         try checkConection(data: data, response: response)
-        let session = try JSONDecoder().decode(Session.self, from: data)
+        _ = try JSONDecoder().decode(Session.self, from: data)
+    }
+    func updateAvatar(image: UIImage, on baseURL: URL, with token: String) async throws {
+        let url = baseURL.appending(path: "users/avatar")
+        var request = URLRequest(url: url)
+        request.httpMethod = "PUT"
+        request.setValue("Bearer \(token)", forHTTPHeaderField: "Authorization")
+        request.setValue("application/json", forHTTPHeaderField: "accept")
+        request.setValue("image/png", forHTTPHeaderField: "Content-Type")
+        request.httpBody = image.pngData()
+        
+        print(image.pngData()?.count.formatted(.byteCount(style: .file)))
+
+        let (data, response) = try await URLSession.shared.data(for: request)
+
+        try checkConection(data: data, response: response)
+
+        let user = try JSONDecoder().decode(User.self, from: data)
+
+        print(user.avatar)
     }
 }

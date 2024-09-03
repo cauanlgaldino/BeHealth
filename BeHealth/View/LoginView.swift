@@ -135,6 +135,7 @@ private extension LoginView {
             case .success(let success):
                 if success {
                     isLoginSuccessful = true
+//                    router.navigate(to: .feed)
                     router.navigate(to: .contentView)
                     // Se o login for sucesso, mude o estado para navegar
                 } else {

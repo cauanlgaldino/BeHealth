@@ -47,15 +47,9 @@
       }
     },
     {
-<<<<<<< HEAD
-      "identity" : "swiftlint#xcode-projects",
-      "kind" : "remoteSourceControl",
-      "location" : "https://github.com/realm/SwiftLint#xcode-projects",
-=======
       "identity" : "swiftlint",
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/realm/SwiftLint.git",
->>>>>>> feature_integracao_backend
       "state" : {
         "revision" : "a24488f26e60247d8fff7bbb03d51910af3dc91c",
         "version" : "0.56.2"
