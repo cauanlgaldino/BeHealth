@@ -10,27 +10,74 @@ import SwiftUI
 @main
 struct BeHealthApp: App {
     @ObservedObject var router = Router()
-
+    @AppStorage("username") var username: String?
+    @State private var isAuthenticated = false
+    @State private var isAuthenticationChecked = false
+    @StateObject private var viewModel = UserViewModel()
+    private let service = "com.login.app"
+    private let keychain = KeychainManager()
     var body: some Scene {
         WindowGroup {
-            NavigationStack(path: $router.navPath) {
-                Start()
-                    .navigationDestination(for: Router.Destination.self) { destination in
-                        switch destination {
-                        case .feed:
-                            FeedView()
-                        case .login:
-                            LoginView()
-                        case .settings:
-                            ConfigPage()
-                        case .contentView:
-                            ContentView()
-                        case .searchView:
-                            SearchView()
-                        }
-                    }
-            }
-            .environmentObject(router)
-        }
-    }
-}
+             ZStack {
+                 if isAuthenticationChecked {
+                     if isAuthenticated {
+                         TavView()
+                     } else {
+                         ZStack {
+                             Image("loginscreen")
+                                 .resizable()
+                                 .aspectRatio(contentMode: .fill)
+                                 .containerRelativeFrame([.horizontal, .vertical])
+                                 .scaleEffect(1.1)
+
+                         }
+                         .fullScreenCover(isPresented: .constant(!isAuthenticated)) {StartView(isAuthenticated: $isAuthenticated)}
+                     }
+                 } else {
+                     ProgressView("Verificando autenticação...")
+                 }
+             }
+             .task {
+                 await checkAuthentication()
+             }
+         }
+     }
+    
+    private func checkAuthentication() async {
+         if let session = retrieveSession(), await viewModel.fetchMe(session: session) {
+             isAuthenticated = true
+         } else {
+             isAuthenticated = false
+         }
+         isAuthenticationChecked = true
+     }
+     
+     // Método para recuperar o session do Keychain
+     private func retrieveSession() -> String? {
+         guard let username = username,
+               let retrievedData = keychain.readData(forService: service, account: username),
+               let session = String(data: retrievedData, encoding: .utf8) else {
+             print("Erro ao recuperar Keychain")
+             return nil
+         }
+         return session
+     }
+ }
+
+
+//    .navigationDestination(for: Router.Destination.self) { destination in
+//        switch destination {
+//        case .feedView:
+//            FeedView()
+//        case .loginView:
+//            LoginView()
+//        case .settings:
+//            ConfigPage()
+//        case .contentView:
+//            TavView()
+//        case .searchView:
+//            SearchView()
+//        case .createUserView:
+//            CreateUser()
+//        }
+//    }

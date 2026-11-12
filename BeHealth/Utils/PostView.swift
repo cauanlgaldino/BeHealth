@@ -10,16 +10,20 @@ import SwiftUI
 struct PostView: View {
     @State private var liked = false
     @State private var comment = false
+    var name: String
+    var username: String
+    var avatar: UIImage?
+    var image: UIImage?
+    var url: URL?
     var body: some View {
         ZStack {
             Color.verdemeleca
             VStack(spacing: 0) {
                 HStack {
-                    Circle()
-                        .frame(width: 40, height: 40)
+                    AvatarView(url: url, size: 40)
                     VStack(alignment: .leading) {
-                        Text("Name")
-                        Text("@username")
+                        Text(name)
+                        Text(username)
                     }
                     Spacer()
                     Menu {
@@ -48,9 +52,9 @@ struct PostView: View {
                 .padding(.top, 8)
                 .padding(.trailing, 16)
                 .padding(.bottom, 8)
-                Image("psyduck")
+                Image(uiImage: image!)
                     .resizable()
-                    .scaledToFit()
+                    .aspectRatio(contentMode: .fit)
                 VStack {
                     HStack {
                         Button {
@@ -84,7 +88,6 @@ struct PostView: View {
     }
 }
 
-
 struct CommentView: View {
     var body: some View {
         NavigationStack {
@@ -98,6 +101,6 @@ struct CommentView: View {
     }
 }
 
-#Preview {
-    PostView()
-}
+//#Preview {
+//    PostView()
+//}

@@ -6,16 +6,23 @@
 //
 
 import Foundation
+import UIKit
 
 enum ServiceError: Error {
     case invalidURL
-    case invalidResponsecCase(code: Int, body: Data?)
+    case invalidResponseCase(code: Int, body: Data?)
     case decodingError
 }
 
 enum LoginError: Error {
     case userNotFound
     case invalidCredentials
+    case keychainError
+    case networkError(Error)
+}
+
+enum CreateLoginError: Error {
+    case userExists
     case keychainError
     case networkError(Error)
 }
@@ -49,7 +56,7 @@ struct UserService {
                 print("😸 Sucesso! \(response.statusCode)")
             default:
                 print("🙀 Erro \(response.statusCode)")
-                throw ServiceError.invalidResponsecCase(code: response.statusCode, body: data)
+                throw ServiceError.invalidResponseCase(code: response.statusCode, body: data)
             }
         }
     }
@@ -99,6 +106,25 @@ struct UserService {
         request.setValue("application/json", forHTTPHeaderField: "Content-Type")
         let (data, response) = try await URLSession.shared.data(for: request)
         try checkConection(data: data, response: response)
-        let session = try JSONDecoder().decode(Session.self, from: data)
+        _ = try JSONDecoder().decode(Session.self, from: data)
+    }
+    func updateAvatar(image: UIImage, on baseURL: URL, with token: String) async throws {
+        let url = baseURL.appending(path: "users/avatar")
+        var request = URLRequest(url: url)
+        request.httpMethod = "PUT"
+        request.setValue("Bearer \(token)", forHTTPHeaderField: "Authorization")
+        request.setValue("application/json", forHTTPHeaderField: "accept")
+        request.setValue("image/png", forHTTPHeaderField: "Content-Type")
+        request.httpBody = image.pngData()
+        
+        print(image.pngData()?.count.formatted(.byteCount(style: .file)))
+
+        let (data, response) = try await URLSession.shared.data(for: request)
+
+        try checkConection(data: data, response: response)
+
+        let user = try JSONDecoder().decode(User.self, from: data)
+
+        print(user.avatar)
     }
 }

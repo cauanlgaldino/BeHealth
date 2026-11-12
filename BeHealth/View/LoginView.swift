@@ -13,7 +13,7 @@ struct LoginView: View {
     @State private var alertMessage = ""
     @State private var showAlert = false
     @State var isLoginSuccessful: Bool = false
-    @EnvironmentObject var router: Router
+    @Binding var isAuthenticated: Bool
     @FocusState private var usernameFocused: Bool
     @FocusState private var passwordFocused: Bool
     @StateObject private var viewModel = UserViewModel()
@@ -52,41 +52,59 @@ struct LoginView: View {
 
 private extension LoginView {
     var usernameTextField: some View {
-        TextField("Insira seu username", text: $username)
-            .padding(12)
-            .autocapitalization(.none)
-            .disableAutocorrection(true)
-            .foregroundColor(.verdeoliva)
-            .textContentType(.username)
-            .textFieldStyle(.plain)
-            .focused($usernameFocused)
-            .submitLabel(.next)
-            .onSubmit {
-                passwordFocused = true
+        VStack(alignment: .leading, spacing: 4) {
+            HStack{
+                Image(systemName:"person")
+                    .font(.system(size: 24))
+                Text("Nome de Usuário")
             }
-            .overlay(
-                RoundedRectangle(cornerRadius: 10)
-                    .stroke(Color.verdeoliva, lineWidth: 2)
-            )
+                .font(.headline)
+                .foregroundColor(.iconcolor)
+            TextField("Insira seu username", text: $username)
+                .padding(12)
+                .autocapitalization(.none)
+                .disableAutocorrection(true)
+                .foregroundColor(.verdeoliva)
+                .textContentType(.username)
+                .textFieldStyle(.plain)
+                .focused($usernameFocused)
+                .submitLabel(.next)
+                .onSubmit {
+                    passwordFocused = true
+                }
+                .overlay(
+                    RoundedRectangle(cornerRadius: 10)
+                        .stroke(Color.verdeoliva, lineWidth: 2)
+                )
+        }
     }
     var passwordTextField: some View {
-        SecureField("Insira sua senha", text: $password)
-            .padding(12)
-            .autocapitalization(.none)
-            .disableAutocorrection(true)
-            .foregroundColor(.verdeoliva)
-            .textContentType(.password)
-            .focused($passwordFocused)
-            .submitLabel(.go)
-            .onSubmit {
-                submit()
+        VStack(alignment: .leading, spacing: 4) {
+            HStack {
+                Image(systemName:"lock")
+                    .font(.system(size: 24))
+                Text("Senha")
             }
-            .background(Color.white)
-            .cornerRadius(8)
-            .overlay(
-                RoundedRectangle(cornerRadius: 10)
-                    .stroke(Color.verdeoliva, lineWidth: 2)
-            )
+                .font(.headline)
+                .foregroundColor(.iconcolor)
+            SecureField("Insira sua senha", text: $password)
+                .padding(12)
+                .autocapitalization(.none)
+                .disableAutocorrection(true)
+                .foregroundColor(.verdeoliva)
+                .textContentType(.password)
+                .focused($passwordFocused)
+                .submitLabel(.go)
+                .onSubmit {
+                    submit()
+                }
+                .background(Color.white)
+                .cornerRadius(8)
+                .overlay(
+                    RoundedRectangle(cornerRadius: 10)
+                        .stroke(Color.verdeoliva, lineWidth: 2)
+                )
+        }
     }
     var loginButton: some View {
         Button {
@@ -113,13 +131,11 @@ private extension LoginView {
         Task {
             // MARK: Colocar chamada de função
             let result = await viewModel.loginUser(username: username, password: password)
-            
             switch result {
             case .success(let success):
                 if success {
                     isLoginSuccessful = true
-                    router.navigate(to: .feed)
-                    // Se o login for sucesso, mude o estado para navegar
+                    isAuthenticated = true
                 } else {
                     alertMessage = "Erro inesperado ao fazer login"
                     showAlert = true
@@ -150,6 +166,6 @@ extension View {
         UIApplication.shared.sendAction(#selector(UIResponder.resignFirstResponder), to: nil, from: nil, for: nil)
     }
 }
-#Preview {
-    LoginView()
-}
+//#Preview {
+//    LoginView()
+//}

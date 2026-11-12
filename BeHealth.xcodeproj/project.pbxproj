@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		368F86B72C7E008F00BDFF0B /* CriarUsuarioView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 368F86B62C7E008F00BDFF0B /* CriarUsuarioView.swift */; };
+		772803842C86BF62002E5D0F /* AvatarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 772803832C86BF62002E5D0F /* AvatarView.swift */; };
+		773EFFC22C85F75F0081F3BB /* PostViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 773EFFC12C85F75F0081F3BB /* PostViewModel.swift */; };
+		773EFFC42C85F7840081F3BB /* PostService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 773EFFC32C85F7840081F3BB /* PostService.swift */; };
+		773EFFC62C85F7A00081F3BB /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 773EFFC52C85F7A00081F3BB /* Post.swift */; };
+		773EFFC82C86A53F0081F3BB /* TrackableScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 773EFFC72C86A53F0081F3BB /* TrackableScrollView.swift */; };
 		774DCA8F2C8393D600FB82FF /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 774DCA8E2C8393D600FB82FF /* UserService.swift */; };
 		774DCA912C8393FD00FB82FF /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 774DCA902C8393FD00FB82FF /* User.swift */; };
 		774DCA932C83944100FB82FF /* UserViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 774DCA922C83944100FB82FF /* UserViewModel.swift */; };
@@ -16,22 +22,30 @@
 		774DCA9C2C83952000FB82FF /* FollowService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 774DCA9B2C83952000FB82FF /* FollowService.swift */; };
 		774DCA9E2C83BBEC00FB82FF /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 774DCA9D2C83BBEC00FB82FF /* Router.swift */; };
 		774DCAA02C83DAA700FB82FF /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 774DCA9F2C83DAA700FB82FF /* SearchView.swift */; };
+		77ADB3CF2C840393002ABB92 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77ADB3CE2C840393002ABB92 /* ContentView.swift */; };
 		77D7F5BE2C81F58000AAA227 /* FeedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77D7F5BD2C81F58000AAA227 /* FeedView.swift */; };
 		77D7F5C22C81F60A00AAA227 /* PostView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77D7F5C12C81F60A00AAA227 /* PostView.swift */; };
 		E77824D42C78D6BC00B55618 /* BeHealthApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E77824D32C78D6BC00B55618 /* BeHealthApp.swift */; };
-		E77824D62C78D6BC00B55618 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E77824D52C78D6BC00B55618 /* ContentView.swift */; };
 		E77824D82C78D6BE00B55618 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E77824D72C78D6BE00B55618 /* Assets.xcassets */; };
 		E77824DB2C78D6BE00B55618 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E77824DA2C78D6BE00B55618 /* Preview Assets.xcassets */; };
 		E77824E52C78D6BE00B55618 /* BeHealthTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E77824E42C78D6BE00B55618 /* BeHealthTests.swift */; };
 		E77824EF2C78D6BE00B55618 /* BeHealthUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E77824EE2C78D6BE00B55618 /* BeHealthUITests.swift */; };
 		E77824F12C78D6BE00B55618 /* BeHealthUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E77824F02C78D6BE00B55618 /* BeHealthUITestsLaunchTests.swift */; };
+		E7C9D12D2C8484ED00BCF6DE /* CameraViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7C9D12C2C8484ED00BCF6DE /* CameraViewModel.swift */; };
+		E7C9D12F2C8485DF00BCF6DE /* CameraService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7C9D12E2C8485DF00BCF6DE /* CameraService.swift */; };
+		E7C9D1312C84939300BCF6DE /* LiveCameraView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7C9D1302C84939300BCF6DE /* LiveCameraView.swift */; };
+		E7C9D1332C84999300BCF6DE /* BeHealthCameraView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7C9D1322C84999300BCF6DE /* BeHealthCameraView.swift */; };
+		E7C9D1352C84BF2C00BCF6DE /* CropModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7C9D1342C84BF2C00BCF6DE /* CropModel.swift */; };
+		E7C9D1372C84C22300BCF6DE /* HomeCropView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7C9D1362C84C22300BCF6DE /* HomeCropView.swift */; };
+		E7C9D13A2C84C50900BCF6DE /* CustomImagePickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7C9D1392C84C50900BCF6DE /* CustomImagePickerView.swift */; };
+		E7C9D13C2C8533E800BCF6DE /* TabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7C9D13B2C8533E800BCF6DE /* TabView.swift */; };
 		E902F89E2C83772B003C0384 /* VisualizarPerfil.swift in Sources */ = {isa = PBXBuildFile; fileRef = E902F89D2C83772B003C0384 /* VisualizarPerfil.swift */; };
-		E90E5EBE2C7CAAF700E27B41 /* Login.swift in Sources */ = {isa = PBXBuildFile; fileRef = E90E5EBD2C7CAAF700E27B41 /* Login.swift */; };
 		E9EB9F5A2C7DF01100D57A65 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9EB9F592C7DF01100D57A65 /* LoginView.swift */; };
-		E9EB9F5F2C7DF94B00D57A65 /* Start.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9EB9F5E2C7DF94B00D57A65 /* Start.swift */; };
-		E9EB9F6E2C7F4F1F00D57A65 /* PerfilPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9EB9F6D2C7F4F1F00D57A65 /* PerfilPage.swift */; };
-		E9EB9F702C7F4FC900D57A65 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9EB9F6F2C7F4FC900D57A65 /* Post.swift */; };
+		E9EB9F5F2C7DF94B00D57A65 /* StartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9EB9F5E2C7DF94B00D57A65 /* StartView.swift */; };
+		E9EB9F6E2C7F4F1F00D57A65 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9EB9F6D2C7F4F1F00D57A65 /* ProfileView.swift */; };
+		E9EB9F702C7F4FC900D57A65 /* PostMockup.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9EB9F6F2C7F4FC900D57A65 /* PostMockup.swift */; };
 		E9EB9F722C7FD64700D57A65 /* ConfigPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9EB9F712C7FD64700D57A65 /* ConfigPage.swift */; };
+		E9F82C102C814F2400C1B6DD /* CreateUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9F82C0F2C814F2300C1B6DD /* CreateUser.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,6 +66,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		368F86B62C7E008F00BDFF0B /* CriarUsuarioView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CriarUsuarioView.swift; sourceTree = "<group>"; };
+		772803832C86BF62002E5D0F /* AvatarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvatarView.swift; sourceTree = "<group>"; };
+		773EFFC12C85F75F0081F3BB /* PostViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostViewModel.swift; sourceTree = "<group>"; };
+		773EFFC32C85F7840081F3BB /* PostService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostService.swift; sourceTree = "<group>"; };
+		773EFFC52C85F7A00081F3BB /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
+		773EFFC72C86A53F0081F3BB /* TrackableScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackableScrollView.swift; sourceTree = "<group>"; };
 		774DCA8E2C8393D600FB82FF /* UserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
 		774DCA902C8393FD00FB82FF /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		774DCA922C83944100FB82FF /* UserViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewModel.swift; sourceTree = "<group>"; };
@@ -61,11 +81,11 @@
 		774DCA9B2C83952000FB82FF /* FollowService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowService.swift; sourceTree = "<group>"; };
 		774DCA9D2C83BBEC00FB82FF /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
 		774DCA9F2C83DAA700FB82FF /* SearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
+		77ADB3CE2C840393002ABB92 /* ContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ContentView.swift; path = BeHealth/ContentView.swift; sourceTree = SOURCE_ROOT; };
 		77D7F5BD2C81F58000AAA227 /* FeedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedView.swift; sourceTree = "<group>"; };
 		77D7F5C12C81F60A00AAA227 /* PostView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostView.swift; sourceTree = "<group>"; };
 		E77824D02C78D6BC00B55618 /* BeHealth.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BeHealth.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E77824D32C78D6BC00B55618 /* BeHealthApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeHealthApp.swift; sourceTree = "<group>"; };
-		E77824D52C78D6BC00B55618 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		E77824D72C78D6BE00B55618 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E77824DA2C78D6BE00B55618 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		E77824E02C78D6BE00B55618 /* BeHealthTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BeHealthTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -73,13 +93,21 @@
 		E77824EA2C78D6BE00B55618 /* BeHealthUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BeHealthUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E77824EE2C78D6BE00B55618 /* BeHealthUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeHealthUITests.swift; sourceTree = "<group>"; };
 		E77824F02C78D6BE00B55618 /* BeHealthUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeHealthUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		E7C9D12C2C8484ED00BCF6DE /* CameraViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraViewModel.swift; sourceTree = "<group>"; };
+		E7C9D12E2C8485DF00BCF6DE /* CameraService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraService.swift; sourceTree = "<group>"; };
+		E7C9D1302C84939300BCF6DE /* LiveCameraView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiveCameraView.swift; sourceTree = "<group>"; };
+		E7C9D1322C84999300BCF6DE /* BeHealthCameraView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeHealthCameraView.swift; sourceTree = "<group>"; };
+		E7C9D1342C84BF2C00BCF6DE /* CropModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CropModel.swift; sourceTree = "<group>"; };
+		E7C9D1362C84C22300BCF6DE /* HomeCropView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCropView.swift; sourceTree = "<group>"; };
+		E7C9D1392C84C50900BCF6DE /* CustomImagePickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomImagePickerView.swift; sourceTree = "<group>"; };
+		E7C9D13B2C8533E800BCF6DE /* TabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabView.swift; sourceTree = "<group>"; };
 		E902F89D2C83772B003C0384 /* VisualizarPerfil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisualizarPerfil.swift; sourceTree = "<group>"; };
-		E90E5EBD2C7CAAF700E27B41 /* Login.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Login.swift; sourceTree = "<group>"; };
 		E9EB9F592C7DF01100D57A65 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
-		E9EB9F5E2C7DF94B00D57A65 /* Start.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Start.swift; sourceTree = "<group>"; };
-		E9EB9F6D2C7F4F1F00D57A65 /* PerfilPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PerfilPage.swift; sourceTree = "<group>"; };
-		E9EB9F6F2C7F4FC900D57A65 /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
+		E9EB9F5E2C7DF94B00D57A65 /* StartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartView.swift; sourceTree = "<group>"; };
+		E9EB9F6D2C7F4F1F00D57A65 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
+		E9EB9F6F2C7F4FC900D57A65 /* PostMockup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostMockup.swift; sourceTree = "<group>"; };
 		E9EB9F712C7FD64700D57A65 /* ConfigPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigPage.swift; sourceTree = "<group>"; };
+		E9F82C0F2C814F2300C1B6DD /* CreateUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateUser.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,6 +142,8 @@
 				774DCA8E2C8393D600FB82FF /* UserService.swift */,
 				774DCA942C83946C00FB82FF /* KeychainManager.swift */,
 				774DCA9B2C83952000FB82FF /* FollowService.swift */,
+				E7C9D12E2C8485DF00BCF6DE /* CameraService.swift */,
+				773EFFC32C85F7840081F3BB /* PostService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -129,8 +159,17 @@
 		77D7F5BA2C81F34000AAA227 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				E9F82C0F2C814F2300C1B6DD /* CreateUser.swift */,
+				E9EB9F712C7FD64700D57A65 /* ConfigPage.swift */,
+				E9EB9F6D2C7F4F1F00D57A65 /* ProfileView.swift */,
+				E902F89D2C83772B003C0384 /* VisualizarPerfil.swift */,
+				E9EB9F592C7DF01100D57A65 /* LoginView.swift */,
+				E9EB9F5E2C7DF94B00D57A65 /* StartView.swift */,
 				77D7F5BD2C81F58000AAA227 /* FeedView.swift */,
 				774DCA9F2C83DAA700FB82FF /* SearchView.swift */,
+				E7C9D1382C84C4A300BCF6DE /* Camera & Gallery */,
+				E7C9D13B2C8533E800BCF6DE /* TabView.swift */,
+				773EFFC72C86A53F0081F3BB /* TrackableScrollView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -140,6 +179,8 @@
 			children = (
 				774DCA902C8393FD00FB82FF /* User.swift */,
 				774DCA992C8394DC00FB82FF /* Follow.swift */,
+				E7C9D1342C84BF2C00BCF6DE /* CropModel.swift */,
+				773EFFC52C85F7A00081F3BB /* Post.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -147,8 +188,10 @@
 		77D7F5BC2C81F35600AAA227 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				E7C9D12C2C8484ED00BCF6DE /* CameraViewModel.swift */,
 				774DCA922C83944100FB82FF /* UserViewModel.swift */,
 				774DCA9D2C83BBEC00FB82FF /* Router.swift */,
+				773EFFC12C85F75F0081F3BB /* PostViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -157,6 +200,8 @@
 			isa = PBXGroup;
 			children = (
 				77D7F5C12C81F60A00AAA227 /* PostView.swift */,
+				E9EB9F6F2C7F4FC900D57A65 /* PostMockup.swift */,
+				772803832C86BF62002E5D0F /* AvatarView.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -191,15 +236,10 @@
 				77D7F5BB2C81F34F00AAA227 /* Model */,
 				77D7F5BA2C81F34000AAA227 /* View */,
 				E77824D32C78D6BC00B55618 /* BeHealthApp.swift */,
-				E77824D52C78D6BC00B55618 /* ContentView.swift */,
-				E9EB9F5E2C7DF94B00D57A65 /* Start.swift */,
-				E9EB9F592C7DF01100D57A65 /* LoginView.swift */,
-				E902F89D2C83772B003C0384 /* VisualizarPerfil.swift */,
+				77ADB3CE2C840393002ABB92 /* ContentView.swift */,
+				368F86B62C7E008F00BDFF0B /* CriarUsuarioView.swift */,
 				E77824D72C78D6BE00B55618 /* Assets.xcassets */,
 				E77824D92C78D6BE00B55618 /* Preview Content */,
-				E9EB9F6D2C7F4F1F00D57A65 /* PerfilPage.swift */,
-				E9EB9F6F2C7F4FC900D57A65 /* Post.swift */,
-				E9EB9F712C7FD64700D57A65 /* ConfigPage.swift */,
 			);
 			path = BeHealth;
 			sourceTree = "<group>";
@@ -227,6 +267,17 @@
 				E77824F02C78D6BE00B55618 /* BeHealthUITestsLaunchTests.swift */,
 			);
 			path = BeHealthUITests;
+			sourceTree = "<group>";
+		};
+		E7C9D1382C84C4A300BCF6DE /* Camera & Gallery */ = {
+			isa = PBXGroup;
+			children = (
+				E7C9D1302C84939300BCF6DE /* LiveCameraView.swift */,
+				E7C9D1322C84999300BCF6DE /* BeHealthCameraView.swift */,
+				E7C9D1362C84C22300BCF6DE /* HomeCropView.swift */,
+				E7C9D1392C84C50900BCF6DE /* CustomImagePickerView.swift */,
+			);
+			path = "Camera & Gallery";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -384,25 +435,42 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E9F82C102C814F2400C1B6DD /* CreateUser.swift in Sources */,
+				368F86B72C7E008F00BDFF0B /* CriarUsuarioView.swift in Sources */,
 				774DCA9A2C8394DC00FB82FF /* Follow.swift in Sources */,
 				77D7F5BE2C81F58000AAA227 /* FeedView.swift in Sources */,
 				774DCA9C2C83952000FB82FF /* FollowService.swift in Sources */,
-				E9EB9F6E2C7F4F1F00D57A65 /* PerfilPage.swift in Sources */,
+				E7C9D12D2C8484ED00BCF6DE /* CameraViewModel.swift in Sources */,
+				E9EB9F6E2C7F4F1F00D57A65 /* ProfileView.swift in Sources */,
+				773EFFC42C85F7840081F3BB /* PostService.swift in Sources */,
+				E9EB9F6E2C7F4F1F00D57A65 /* ProfileView.swift in Sources */,
+				77ADB3CF2C840393002ABB92 /* ContentView.swift in Sources */,
 				E9EB9F722C7FD64700D57A65 /* ConfigPage.swift in Sources */,
-				E77824D62C78D6BC00B55618 /* ContentView.swift in Sources */,
 				E902F89E2C83772B003C0384 /* VisualizarPerfil.swift in Sources */,
-				E9EB9F702C7F4FC900D57A65 /* Post.swift in Sources */,
-				E77824D62C78D6BC00B55618 /* ContentView.swift in Sources */,
+				E7C9D1332C84999300BCF6DE /* BeHealthCameraView.swift in Sources */,
+				E9EB9F702C7F4FC900D57A65 /* PostMockup.swift in Sources */,
+				E9EB9F702C7F4FC900D57A65 /* PostMockup.swift in Sources */,
 				774DCA8F2C8393D600FB82FF /* UserService.swift in Sources */,
+				773EFFC82C86A53F0081F3BB /* TrackableScrollView.swift in Sources */,
+				773EFFC62C85F7A00081F3BB /* Post.swift in Sources */,
 				774DCAA02C83DAA700FB82FF /* SearchView.swift in Sources */,
 				E9EB9F5A2C7DF01100D57A65 /* LoginView.swift in Sources */,
+				E7C9D1372C84C22300BCF6DE /* HomeCropView.swift in Sources */,
 				774DCA9E2C83BBEC00FB82FF /* Router.swift in Sources */,
 				774DCA912C8393FD00FB82FF /* User.swift in Sources */,
+				773EFFC22C85F75F0081F3BB /* PostViewModel.swift in Sources */,
 				774DCA952C83946C00FB82FF /* KeychainManager.swift in Sources */,
+				772803842C86BF62002E5D0F /* AvatarView.swift in Sources */,
 				774DCA932C83944100FB82FF /* UserViewModel.swift in Sources */,
-				E9EB9F5F2C7DF94B00D57A65 /* Start.swift in Sources */,
+				E9EB9F5F2C7DF94B00D57A65 /* StartView.swift in Sources */,
+				E7C9D1312C84939300BCF6DE /* LiveCameraView.swift in Sources */,
+				E7C9D13A2C84C50900BCF6DE /* CustomImagePickerView.swift in Sources */,
+				E9EB9F5F2C7DF94B00D57A65 /* StartView.swift in Sources */,
 				E77824D42C78D6BC00B55618 /* BeHealthApp.swift in Sources */,
 				77D7F5C22C81F60A00AAA227 /* PostView.swift in Sources */,
+				E7C9D12F2C8485DF00BCF6DE /* CameraService.swift in Sources */,
+				E7C9D13C2C8533E800BCF6DE /* TabView.swift in Sources */,
+				E7C9D1352C84BF2C00BCF6DE /* CropModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -574,6 +642,8 @@
 				ENABLE_PREVIEWS = YES;
 				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSCameraUsageDescription = "BeHealth uses camera acess to take food photos.";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "BeHealth need access to your photos so you can use them.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -604,6 +674,8 @@
 				ENABLE_PREVIEWS = YES;
 				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSCameraUsageDescription = "BeHealth uses camera acess to take food photos.";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "BeHealth need access to your photos so you can use them.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
